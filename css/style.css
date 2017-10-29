@@ -1581,69 +1581,57 @@ td {} .inn-com p {} .inn-com-form {} .inn-com-form form {
     /* bottom: 0px; */
     
     background: #fff;
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     margin-top: 5%;
 }
+
+
+
+
+
+
+
 .log-in-pop-left {
     float: left;
     width: 40%;
-    background: url('../images/login.jpg') no-repeat center center;
-    padding: 11% 6%;
-    color: #fff;
-    height: 100%;
-    bottom: 0px;
-    /* min-height: 115%; */
-}
-.log-in-pop-left::before {} .log-in-pop-left h1 {
-    color: #fff;
-    font-size: 32px;
-}
-.log-in-pop-left h1 span {
-    display: block;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    text-transform: capitalize;
-    color: #fff;
-    font-size: 24px;
-}
-.log-in-pop-left p {
-    color: #fff;
+    padding: 50px;
 }
 .log-in-pop-left h4 {
-    color: #fff;
-    margin-bottom: 15px;
-    margin-top: 15px;
-    border-top: 1px solid #c07882;
-    padding-top: 15px;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
-.log-in-pop-left ul {
-    margin-bottom: 0px;
+.log-in-pop-left p {} .log-in-pop-left a {
+    color: #333;
 }
-.log-in-pop-left ul li {
-    margin-bottom: 5px;
+
+.log-in-pop-left form {} .log-in-pop-left form label {
+    font-size: 14px !important;
+    font-weight: 200;
+    left: 15px;
+    top: 14px;
 }
-.log-in-pop-left ul li a {
-    display: block;
-    background: #3F51B5;
-    color: #fff;
-    padding: 12px;
+.log-in-pop-left form input {
+    border: 1px solid #dfdfdf;
+    padding: 8px;
+    box-sizing: border-box;
+    height: 45px;
     border-radius: 2px;
-    font-family: 'Quicksand', sans-serif;
 }
-.log-in-pop-left ul li:nth-child(1) a {
-    background: #39579A;
+.log-in-pop-left form textarea {
+    border: 1px solid #dfdfdf;
+    padding: 8px;
+    box-sizing: border-box;
+    height: 70px;
+    border-radius: 2px;
 }
-.log-in-pop-left ul li:nth-child(2) a {
-    background: #F24033;
+.log-in-pop-left form input[type="submit"] {} .padd-top {
+    margin-top: 15px;
 }
-.log-in-pop-left ul li:nth-child(3) a {
-    background: #24A9E6;
-}
-.log-in-pop-left ul li a i {
-    padding-right: 7px;
-}
+
+
+
+
 .log-in-pop-right {
     float: left;
     width: 60%;
@@ -1656,6 +1644,7 @@ td {} .inn-com p {} .inn-com-form {} .inn-com-form form {
 .log-in-pop-right p {} .log-in-pop-right a {
     color: #333;
 }
+
 .log-in-pop-right form {} .log-in-pop-right form label {
     font-size: 14px !important;
     font-weight: 200;
@@ -1679,6 +1668,12 @@ td {} .inn-com p {} .inn-com-form {} .inn-com-form form {
 .log-in-pop-right form input[type="submit"] {} .padd-top {
     margin-top: 15px;
 }
+
+
+
+
+
+
 .log-in-btn {
     background: #f4364f;
     color: #fff;
@@ -1717,8 +1712,8 @@ td {} .inn-com p {} .inn-com-form {} .inn-com-form form {
 .dashboard {
     position: relative;
     overflow: hidden;
-    margin-top: 72px;
-    margin-bottom: 55px;
+    margin-top: 67px;
+    margin-bottom: 0px;
     background: linear-gradient(to top, #273237 14%, #f3354e 66%);
 }
 .db-left {
@@ -1728,7 +1723,7 @@ td {} .inn-com p {} .inn-com-form {} .inn-com-form form {
 }
 .db-cent {
     float: left;
-    width: 60%;
+    width: 80%;
     background: #fff;
 }
 .db-righ {
@@ -1736,7 +1731,7 @@ td {} .inn-com p {} .inn-com-form {} .inn-com-form form {
     width: 20%;
 }
 .db-left-1 {
-    padding: 116px 50px 30px 50px;
+    padding: 2px 40px 10px 50px;
     background: url('../images/user.jpg') no-repeat center center;
     background-size: cover;
     position: relative;
@@ -3417,7 +3412,7 @@ footer ul li a {
 .copy {
     position: relative;
     overflow: hidden;
-    margin-bottom: 56px;
+    margin-bottom: 0px;
     background: #1d2033;
 }
 .copy p {
