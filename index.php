@@ -16,7 +16,6 @@
         $query = "SELECT `tipo` FROM `usuario` WHERE id_usuario = '".$_SESSION['usuario']."' ";
         $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
 
-<<<<<<< HEAD
         $datos = mysql_fetch_array($result, MYSQL_ASSOC);
         $_SESSION['usuario'] = $datos['id_usuario'];
 
@@ -38,29 +37,18 @@
 
     include "php/header.php";
     include "html/header.php";
-=======
-    include "Controller/header.php";
-
-
-    include "View/header.php";
-
->>>>>>> origin/master
     if(isset($_GET['pag'])){
-        if (file_exists("Controller/".$_GET['pag'].".php")) {
-           include "Controller/".$_GET['pag'].".php";
+        if (file_exists("php/".$_GET['pag'].".php")) {
+           include "php/".$_GET['pag'].".php";
         }
-        if (file_exists("View/".$_GET['pag'].".php")) {
-           include "View/".$_GET['pag'].".php";
+        if (file_exists("html/".$_GET['pag'].".php")) {
+           include "html/".$_GET['pag'].".php";
         }else{
-            include "View/inicio.php";
+            include "html/inicio.php";
         }  
     }else{
-        include "View/inicio.php";    
+        include "html/inicio.php";    
     }
-<<<<<<< HEAD
     include "html/fotter.php";
 
-=======
-    include "View/fotter.php";
->>>>>>> origin/master
 ?>

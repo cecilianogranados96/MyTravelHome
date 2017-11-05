@@ -14,7 +14,7 @@
 								<div class="row">
 									<div class="input-field col s12 m4 l2">
 										<select>
-											<option value="" disabled selected>País</option>
+											<option value="" disabled selected>Pais</option>
 											<option value="1">Master Suite</option>
 											<option value="2">Mini-Suite</option>
 											<option value="3">Ultra Deluxe</option>
@@ -103,13 +103,13 @@
 					<div class="col-md-4">
 						<div class="hp-call hp-right-com">
 							<div class="hp-call-in"> <img src="images/icon/dbc4.png" alt="">
-								<h3><span>¡Reserva mediante una llamada!</span> +506 4214 4214</h3> <small>Disponibles 24/7 de lunes a domingo</small> <a href="#">Llamar</a> </div>
+								<h3><span>Reserva mediante una llamada!</span> +506 4214 4214</h3> <small>Disponibles 24/7 de lunes a domingo</small> <a href="#">Llamar</a> </div>
 						</div>
 						<!--=========================================-->
 						<!--=========================================-->
 						<div class="hp-book hp-right-com">
 							<div class="hp-book-in">
-								<button class="like-button"><i class="fa fa-heart-o"></i> Síguenos en nuestras redes</button> <span></span>
+								<button class="like-button"><i class="fa fa-heart-o"></i> Siguenos en nuestras redes</button> <span></span>
 								<ul>
 									<li><a href="#"><i class="fa fa-facebook"></i> Share</a>
 									</li>
