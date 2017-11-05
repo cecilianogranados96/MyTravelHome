@@ -1,7 +1,7 @@
 <html lang="es">
 
 <head>
-    <title>MyHotel - Hotel Booking and Room Booking Online Html Responsive Template</title>
+    <title>Travel Home</title>
     <!-- META TAGS -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,7 +42,7 @@
                 <div class="row">
                     <div class="top-bar">
                         <ul>
-                            <li><a href="#!" data-toggle="modal" data-target="#modal2">Admin Hotel</a></li>
+                            <li><a href="" data-toggle="modal" data-target="#modal2">Admin Hotel</a></li>
                             <li><a href="#!" data-toggle="modal" data-target="#modal2">Admin Agencias</a></li>
                             <li><a href="#!" data-toggle="modal" data-target="#modal2">Admin General</a></li>
                         </ul>
