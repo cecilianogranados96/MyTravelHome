@@ -20,7 +20,7 @@
 							<a href="?pag=<?php echo $_GET['pag']; ?>&pagina=cuenta"><img src="images/icon/db4.png" alt="" /> Estadisticas</a>
 						</li>
 						<li>
-							<a href="?pag=<?php echo $_GET['pag']; ?>&pagina=salir"><img src="images/icon/db8.png" alt="" /> Logout</a>
+							<a href="?pag=salir"><img src="images/icon/db8.png" alt="" /> Logout</a>
 						</li>
 					</ul>
 				</div>

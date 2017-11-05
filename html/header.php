@@ -34,17 +34,17 @@
             </div>
         </div>
     </section>
-
     <!--HEADER SECTION-->
     <section>
+        <?php if ($tipo == 0){ ?>
         <div class="menu-section">
             <div class="container">
                 <div class="row">
                     <div class="top-bar">
                         <ul>
-                            <li><a href="#!" data-toggle="modal" data-target="#modal2">Admin Hotel</a></li>
-                            <li><a href="#!" data-toggle="modal" data-target="#modal2">Admin Agencias</a></li>
-                            <li><a href="#!" data-toggle="modal" data-target="#modal2">Admin General</a></li>
+                            <li><a href="?pag=registro_hotel">Registro Hotel</a></li>
+                            <li><a href="?pag=registro_agencia">Registro Agencias</a></li>
+                            <li><a href="?pag=ingresar">Ingreso</a></li>
                         </ul>
                     </div>
                 </div>
@@ -55,9 +55,22 @@
                             <li><a href="index.php">Inicio</a></li>
                             <li><a href="?pag=hoteles">Hoteles</a></li>
                             <li><a href="?pag=descuentos">Descuentos</a></li>
-                            <li><a href="#!" data-toggle="modal" data-target="#modal2">Mi cuenta</a></li>
+                            <?php 
+                            if (!isset($_SESSION['usuario'])){
+                                echo ' <li><a href="?pag=ingresar">Iniciar</a></li>
+                            
+                            <li><a href="?pag=registro">Registrarse</a></li>';
+                                
+                            }else{
+                                echo ' <li><a href="#!" data-toggle="modal" data-target="#modal2">Mi cuenta </a></li>
+                            
+                            <li><a href="?pag=salir">Salir</a></li>';
+                            }
+
+                            ?>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
+        <?php } ?>

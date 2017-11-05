@@ -1712,7 +1712,7 @@ td {} .inn-com p {} .inn-com-form {} .inn-com-form form {
 .dashboard {
     position: relative;
     overflow: hidden;
-    margin-top: 67px;
+    
     margin-bottom: 0px;
     background: linear-gradient(to top, #273237 14%, #f3354e 66%);
 }
