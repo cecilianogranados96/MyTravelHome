@@ -1,7 +1,7 @@
 <div class="db-cent-table db-com-table">
     <div class="db-title">
         <center>
-            <h3><img src="images/icon/dbc6.png" alt="" />Categorias</h3>
+            <h3><img src="images/icon/dbc6.png" alt="" />Categorías</h3>
             <p>Se insertan las categorias de un hotel</p>
         </center>
     </div>
