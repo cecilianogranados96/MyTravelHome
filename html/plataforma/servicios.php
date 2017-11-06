@@ -1,80 +1,114 @@
+<?php 
+
+if (isset($_GET['act'])){
+        $query = " UPDATE `servicios_hotel` SET `nombre`= '".$_POST['nombre_p']."' WHERE id_servicio_hotel = '".$_GET['act']."' ";
+        $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+        echo '<script>alert("¡Actualizado con éxito!");window.location.href = "?pag='.$_GET['pag'].'&pagina='.$_GET['pagina'].'";</script>';
+}
+
+if (isset($_GET['borr'])){
+    $query = "DELETE FROM servicios_hotel WHERE id_servicio_hotel = '".$_GET['borr']."'";
+    $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+    echo '<script>alert("¡Borrado con éxito!"); window.location.href = "?pag='.$_GET['pag'].'&pagina='.$_GET['pagina'].'";</script>';
+}
+
+if (isset($_GET['edit'])){
+
+        $query = "SELECT nombre FROM `servicios_hotel` WHERE id_servicio_hotel= '".$_GET['edit']."' ";
+        $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+        $datos = mysql_fetch_array($result, MYSQL_ASSOC);    
+}    
+
+if (isset($_GET['insert'])){        
+    $query = "INSERT INTO `servicios_hotel`(`id_servicio_hotel`, `nombre`) VALUES ('".mysql_insert_id()."','".$_POST['nombre_n']."')";
+    $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+    echo '<script>alert("¡Registrado con éxito!"); window.location.href = "?pag='.$_GET['pag'].'&pagina='.$_GET['pagina'].'";</script>';
+}
+
+?>
+
 <div class="db-cent-table db-com-table">
     <div class="db-title">
+        <br>
+        <br>
         <center>
-            <h3><img src="images/icon/dbc6.png" alt="" />Servicios</h3>
-            <p>Se insertan las categorias de un hotel</p>
+            <h3><img src="images/icon/dbc4.png" />Catálogo de los servicios ofrecidos por el hotel</h3>
         </center>
     </div>
-
     <!--*************************EDITAR*************************-->
-    <?php if (isset($_GET['edit'])){ ?>
+    <?php if (isset($_GET['edit'])){ ?>        
     <center>
         <div class="db-profile-edit">
-            <form class="col s12" method="post" action="?pag=<?php echo $_GET['pag']; ?>&pagina=<?php echo $_GET['pagina']; ?>">
-                <div>
-                    <label class="col s4">Nombre</label>
-                    <div class="input-field col s8">
-                        <input type="text" name="nombre" class="validate"> </div>
+            <form class="s12" method="post" action="?pag=<?php echo $_GET['pag']; ?>&pagina=<?php echo $_GET['pagina']; ?>&act=<?php echo $_GET['edit']; ?>">
+            <div>
+                <label>Nombre de la categoría</label>
+                <div class="input-field s12">
+                    <input type="text" class="validate" value="<?php echo $datos['nombre']; ?>" name="nombre_p">
                 </div>
-                <div>
-                    <div class="input-field col s8">
-                        <input type="submit" value="Editar" class="waves-effect waves-light pro-sub-btn" id="pro-sub-btn">
-                    </div>
+            </div>
+
+            <div>
+                <div class="input-field s4">
+                    <center>
+                        <input type="submit" value="Actualizar" class="waves-effect waves-light log-in-btn"></center>
                 </div>
-                <center>
-                    <a href="?pag=<?php echo $_GET['pag']; ?>&pagina=<?php echo $_GET['pagina']; ?>&borr=1" class="btn btn-danger">Eliminar</a>
-                </center>
-            </form>
+            </div>
+        </form>
         </div>
     </center>
+
     <?php } ?>
     <!--*************************FIN EDITAR*************************-->
 
     <?php if (!isset($_GET['edit'])){ ?>
     <center>
         <div class="db-profile-edit">
-            <form class="col s12" method="post" action="?pag=<?php echo $_GET['pag']; ?>&pagina=<?php echo $_GET['pagina']; ?>">
+            <form class="col s12" method="post" action="?pag=<?php echo $_GET['pag']; ?>&pagina=<?php echo $_GET['pagina']; ?>&insert=<?php echo $_GET['nombre_n']; ?>">
                 <div>
                     <label class="col s4">Nombre</label>
                     <div class="input-field col s8">
-                        <input type="text" name="nombre" class="validate"> </div>
-                </div>
-                <div>
+                        <input type="text" name="nombre_n" class="validate"> </div>
+                    </div>
+                 <div>
                     <div class="input-field col s8">
-                        <input type="submit" value="Nueva categoria" class="waves-effect waves-light pro-sub-btn" id="pro-sub-btn">
+                        <input type="submit" value="Nueva categoría" class="waves-effect waves-light pro-sub-btn" id="pro-sub-btn">
                     </div>
                 </div>
             </form>
 
         </div>
     </center>
-
+    
     <table class="bordered responsive-table">
         <thead>
             <tr>
                 <th>
-                    <center>Numero</center>
+                    <center>Nombre </center>
                 </th>
                 <th>
-                    <center>Nombre</center>
-                </th>
-                <th>
-                    <center>Editar</center>
+                    <center>Editar/Borrar</center>
                 </th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>
-                    <center>01</center>
-                </td>
-                <td>
-                    <center>Alvin</center>
-                </td>
-                <td>
-                    <center><a href="?pag=<?php echo $_GET['pag']; ?>&pagina=<?php echo $_GET['pagina']; ?>&edit=1" class="btn btn-success">Editar</a></center>
-                </td>
-            </tr>
+            
+            <?php 
+                $query = 'SELECT id_servicio_hotel, nombre FROM servicios_hotel';
+                $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+                while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {  
+                    echo "    <tr>
+                                <td>
+                                    <center>".$line['nombre']."</center>
+                                </td>
+                                
+                                <td>
+                                    <center><a href='?pag=".$_GET['pag']."&pagina=".$_GET['pagina']."&edit=".$line['id_servicio_hotel']."' class='btn btn-success'>Editar</a><a href='?pag=".$_GET['pag']."&pagina=".$_GET['pagina']."&borr=".$line['id_servicio_hotel']."' class='btn btn-danger'>Borrar</a></center>
+                                </td>
+                            </tr>
+                ";
+                }                   
+            ?>
+ 
         </tbody>
     </table>
     <?php } ?>
