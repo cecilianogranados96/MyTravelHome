@@ -1,11 +1,11 @@
 <html lang="es">
 
 <head>
-    <title>MyHotel - Hotel Booking and Room Booking Online Html Responsive Template</title>
+    <title>MyTravelHome</title>
     <!-- META TAGS -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/fav.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Poppins%7CQuicksand:500,700" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link href="css/materialize.css" rel="stylesheet">

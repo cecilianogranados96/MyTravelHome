@@ -3,179 +3,214 @@
     <div class="db-title">
         <center>
             <h3><img src="images/icon/dbc6.png" />Registro de hoteles</h3>
-            <p>Datos de acceso</p>
+            <p>My Travel Home</p>
         </center>
     </div>
 
     <div class="db-profile-edit">
-        <form class="s12" method="post" action="?pag=verificar&rhotel=1">
-            <h2>Persona</h2>
-            <hr>
-            <div>
-                <div class="input-field s12">
-                    <input type="text" data-ng-model="name1" class="validate" name="user">
+        <center>
+            <form class="s12" method="post" action="?pag=verificar&rhotel=1" style="width: 311px;">
+                <h2>Persona</h2>
+                <hr>
+                <div>
                     <label>Usuario</label>
+                    <div class="input-field s12">
+                        <input type="text" data-ng-model="name1" class="validate" name="user">
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div class="input-field s12">
-                    <input type="password" class="validate" name="pass">
+                <div>
                     <label>Contraseña</label>
+                    <div class="input-field s12">
+                        <input type="password" class="validate" name="pass">
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div class="input-field s12">
-                    <input type="text" class="validate" name="nombre_p">
+                <div>
                     <label>Nombre de la persona</label>
+                    <div class="input-field s12">
+                        <input type="text" class="validate" name="nombre_p">
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div class="input-field s12">
-                    <input type="text" class="validate" name="apellido_p">
+                <div>
                     <label>Apellido de la persona</label>
+                    <div class="input-field s12">
+                        <input type="text" class="validate" name="apellido_p">
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div class="input-field s12">
-                    <input type="text" class="validate" name="cedula">
+                <div>
                     <label>Cedula</label>
+                    <div class="input-field s12">
+                        <input type="text" class="validate" name="cedula">
+
+                    </div>
                 </div>
-            </div>
-            <div>
-                <label>Genero</label>
-                <div class="input-field s12">
-                    <select name="genero" class="validate">
-                                <option value=""></option>
-                                <option value="1">Costariccense</option>
+                <div>
+                    <label>Genero</label>
+                    <div class="input-field s12">
+                        <select name="genero" class="validate">
+                            <?php
+                                $query = 'SELECT * FROM genero';
+                                $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+                                while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+                                    echo "<option value='".$line['id_genero']."'>".$line['nombre']."</option>";
+                                }
+                            ?>
                             </select>
-                    
+
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div class="input-field s12">
-                    <input type="text" class="validate" name="nacimiento">
+                <div>
                     <label>Fecha nacimiento</label>
-                </div>
-            </div>
-            <div>
-                  <label>Nacionalidad</label>
-                <div class="input-field s12">
+                    <div class="input-field s12">
+                        <input type="date" class="validate" name="nacimiento">
 
-                    <select name="nacionalidad" class="validate">
-                                <option value=""></option>
-                                <option value="1">Costariccense</option>
+                    </div>
+                </div>
+                <div>
+                    <label>Nacionalidad</label>
+                    <div class="input-field s12">
+
+                        <select name="nacionalidad" class="validate">
+                            <?php
+                                $query = 'SELECT * FROM nacionalidad';
+                                $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+                                while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+                                    echo "<option value='".$line['id_nacionalidad']."'>".$line['nombre']."</option>";
+                                }
+                            ?>
                             </select>
-                  
+
+                    </div>
                 </div>
-            </div>
-            <input type="text" value="0" name="admin" hidden="1">
-            <h2>Hotel</h2>
-            <hr>
+                <input type="text" value="0" name="admin" hidden="1">
+                <h2>Hotel</h2>
+                <hr>
 
 
-            <div>
-                <div class="input-field s12">
-                    <input type="text" data-ng-model="name1" class="validate" name="nombre_hotel">
+                <div>
                     <label>Nombre del hotel</label>
+                    <div class="input-field s12">
+                        <input type="text" data-ng-model="name1" class="validate" name="nombre_hotel">
+
+                    </div>
                 </div>
-            </div>
 
-            <label>Tipo de hotel</label>
-            <div class="input-field s12">
-                <select name="tipo_hotel" class="validate">
-                    <option value=""></option>
-                    <option value="1">Costariccense</option>
+                <label>Tipo de hotel</label>
+                <div class="input-field s12">
+                    <select name="tipo_hotel" class="validate">
+                            <?php
+                                $query = 'SELECT * FROM tipo_hotel';
+                                $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+                                while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+                                    echo "<option value='".$line['id_tipo_hotel']."'>".$line['nombre']."</option>";
+                                }
+                            ?>
                 </select>
-            </div>
+                </div>
 
 
-            <label>Caracteristicas</label>
-            <div class="input-field s12">
-                <select name="caract" class="validate">
-                    <option value=""></option>
-                    <option value="1">Costariccense</option>
+                <label>Caracteristicas</label>
+                <div class="input-field s12">
+                      <input type="text" class="validate" name="caract">
+                    
+              
+                </div>
+
+                <label>Distrito</label>
+                <div class="input-field s12">
+                    <select name="distrito" class="validate">
+                            <?php
+                                $query = 'SELECT * FROM distrito';
+                                $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+                                while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+                                    echo "<option value='".$line['id_distrito']."'>".$line['nombre']."</option>";
+                                }
+                            ?>
                 </select>
-            </div>
+                </div>
 
-            <label>Distrito</label>
-            <div class="input-field s12">
-                <select name="distrito" class="validate">
-                    <option value=""></option>
-                    <option value="1">Costariccense</option>
+                <label>Rango de precio</label>
+                <div class="input-field s12">
+                    <select name="precio" class="validate">
+                            <?php
+                                $query = 'SELECT * FROM rango_precio';
+                                $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+                                while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+                                    echo "<option value='".$line['id_rango']."'>".$line['precio_inicial']." - ".$line['precio_final']."</option>";
+                                }
+                            ?>
                 </select>
-            </div>
+                </div>
 
-            <label>Rango de precio</label>
-            <div class="input-field s12">
-                <select name="precio" class="validate">
-                    <option value=""></option>
-                    <option value="1">Costariccense</option>
+                <label>Categoria</label>
+                <div class="input-field s12">
+                    <select name="categoria" class="validate">
+                            <?php
+                                $query = 'SELECT * FROM categoria_hotel';
+                                $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+                                while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+                                    echo "<option value='".$line['id_categoria_hotel']."'>".$line['nombre']."</option>";
+                                }
+                            ?>
                 </select>
-            </div>
-            
-            <label>Categoria</label>
-            <div class="input-field s12">
-                <select name="categoria" class="validate">
-                    <option value=""></option>
-                    <option value="1">Costariccense</option>
-                </select>
-            </div>
-            
-            <label>Localizacion</label>
-                        <div id="map" style="height: 80%;"></div>
-                        <input type="text" id="LAT" name="localicacion" hidden/>
-            <div>
-                <div class="input-field s4">
-                    <center>
-                        <input type="submit" value="Registro" class="waves-effect waves-light log-in-btn"> </div>
-            </div>
-        </form>
+                </div>
 
-            
-    <script>
-        var marker;
-        var coords = {};
+                <label>Localizacion</label>
+                <div id="map" style="height: 80%;"></div>
+                <input type="text" id="LAT" name="localicacion" hidden/>
+                <div>
+                    <div class="input-field s4">
+                        <center>
+                            <input type="submit" value="Registro" class="waves-effect waves-light log-in-btn"> </div>
+                </div>
+            </form>
 
-        //Funcion principal
-        initMap = function() {
 
-            coords = {
-                lat: 9.6620154,
-                lng: -83.891521
-            };
-            setMapa(coords);
-            document.getElementById("LAT").value = coords.lat+","+coords.lng;;
-        }
+            <script>
+                var marker;
+                var coords = {};
 
-        function setMapa(coords) {
+                //Funcion principal
+                initMap = function() {
 
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 10,
-                center: new google.maps.LatLng(coords.lat, coords.lng),
+                    coords = {
+                        lat: 9.6620154,
+                        lng: -83.891521
+                    };
+                    setMapa(coords);
+                    document.getElementById("LAT").value = coords.lat + "," + coords.lng;;
+                }
 
-            });
-            marker = new google.maps.Marker({
-                map: map,
-                draggable: true,
-                animation: google.maps.Animation.DROP,
-                position: new google.maps.LatLng(coords.lat, coords.lng),
+                function setMapa(coords) {
 
-            });
-            marker.addListener('click', toggleBounce);
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 10,
+                        center: new google.maps.LatLng(coords.lat, coords.lng),
 
-            marker.addListener('dragend', function(event) {
-                document.getElementById("LAT").value = this.getPosition().lat()+','+this.getPosition().lng();
-            });
-        }
+                    });
+                    marker = new google.maps.Marker({
+                        map: map,
+                        draggable: true,
+                        animation: google.maps.Animation.DROP,
+                        position: new google.maps.LatLng(coords.lat, coords.lng),
 
-        function toggleBounce() {
-            if (marker.getAnimation() !== null) {
-                marker.setAnimation(null);
-            } else {
-                marker.setAnimation(google.maps.Animation.BOUNCE);
-            }
-        }
+                    });
+                    marker.addListener('click', toggleBounce);
 
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWqHd142DIknn374Y48LxrttUsgde0g0Q&callback=initMap">
-    </script>
+                    marker.addListener('dragend', function(event) {
+                        document.getElementById("LAT").value = this.getPosition().lat() + ',' + this.getPosition().lng();
+                    });
+                }
+
+                function toggleBounce() {
+                    if (marker.getAnimation() !== null) {
+                        marker.setAnimation(null);
+                    } else {
+                        marker.setAnimation(google.maps.Animation.BOUNCE);
+                    }
+                }
+
+            </script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWqHd142DIknn374Y48LxrttUsgde0g0Q&callback=initMap">
+
+
+            </script>

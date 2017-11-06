@@ -1,3 +1,14 @@
+<?php 
+
+if (isset($_GET['borr'])){
+    $query = "DELETE FROM `habitacion` WHERE id_habitacion = '".$_GET['borr']."'";
+    $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+    echo '<script>alert("Borrado con exito!"); window.location.href = "?pag='.$_GET['pag'].'&pagina=habitaciones";</script>';
+}
+
+
+
+?>
 <div class="db-cent-table db-com-table">
     <div class="db-title">
         <center>
@@ -8,7 +19,6 @@
 
     <!--*************************EDITAR*************************-->
 
-    <?php if (!isset($_GET['edit'])){ ?>
 
 
     <table class="bordered responsive-table">
@@ -60,5 +70,5 @@
  
         </tbody>
     </table>
-    <?php } ?>
+
 </div>

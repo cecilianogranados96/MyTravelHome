@@ -1,11 +1,12 @@
 
 
 <?php 
+print_r($datos);
 if (isset($_GET['rhotel'])){
     $query = "INSERT INTO `usuario`(`usuario`, `contrasena`, `tipo`) VALUES ('".$_POST['user']."','".md5($_POST['pass'])."',1)";
     $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
-    $query = "INSERT INTO `adm_hotel`(`id_usuario`, `nombre`, `apellido`, `nacionalidad`, `genero`, `cedula`, `admin`) 
-        VALUES ('".mysql_insert_id()."','".$_POST['apellido_p']."','".$_POST['apellido_p']."','".$_POST['nacionalidad']."','".$_POST['genero']."','".$_POST['cedula']."','".$_POST['admin']."')";
+    $query = "INSERT INTO `adm_hotel`(`id_usuario`, `nombre`, `apellido`, `nacionalidad`, `genero`, `cedula`, `admin`,id_hotel) 
+        VALUES ('".mysql_insert_id()."','".$_POST['apellido_p']."','".$_POST['apellido_p']."','".$_POST['nacionalidad']."','".$_POST['genero']."','".$_POST['cedula']."','".$_POST['admin']."','".$datos['id_hotel']."')";
     $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
     echo '<script>alert("Registrado con exito!"); window.location.href = "?pag='.$_GET['pag'].'&pagina='.$_GET['pagina'].'";</script>';
 }
@@ -51,7 +52,7 @@ if (isset($_GET['rhotel'])){
                      <div>
                            <label>Cedula</label>
                         <div class="input-field s12">
-                            <input type="text" class="validate"  name="cedula">
+                            <input type="number" class="validate"  name="cedula">
                           
                         </div>
                     </div>
@@ -59,8 +60,13 @@ if (isset($_GET['rhotel'])){
                             <label>Genero</label>
                         <div class="input-field s12">
                                <select name="genero" class="validate" >
-                                <option value=""></option>
-                                <option value="1">Costariccense</option>
+                                <?php
+                                    $query = 'SELECT * FROM genero';
+                                    $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+                                    while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+                                        echo "<option value='".$line['id_genero']."'>".$line['nombre']."</option>";
+                                    }
+                                ?>
                             </select>
                          
                         </div>
@@ -71,8 +77,13 @@ if (isset($_GET['rhotel'])){
                         <div class="input-field s12">
                             
                             <select name="nacionalidad" class="validate" >
-                                <option value=""></option>
-                                <option value="1">Costariccense</option>
+                                   <?php
+                                    $query = 'SELECT * FROM nacionalidad';
+                                    $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+                                    while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+                                        echo "<option value='".$line['id_nacionalidad']."'>".$line['nombre']."</option>";
+                                    }
+                                ?>
                             </select>
                             
                         </div>

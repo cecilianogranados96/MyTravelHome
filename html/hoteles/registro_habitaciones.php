@@ -10,9 +10,8 @@ if (isset($_GET['rhotel'])){
      '".$_POST['tipo']."',
     '".$_POST['precio']."',
     '".$_POST['numero']."')";
-    echo $query;
     $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
-    echo '<script>alert("Registrado con exito!"); window.location.href = "?pag='.$_GET['pag'].'&pagina='.$_GET['pagina'].'";</script>';
+    echo '<script>alert("Registrado con exito!"); window.location.href = "?pag='.$_GET['pag'].'&pagina=habitaciones";</script>';
 }
 ?>
 <div class="db-cent-table db-com-table">
@@ -36,8 +35,15 @@ if (isset($_GET['rhotel'])){
                            <label>Tipo de habitacion</label>
                         <div class="input-field s12">
                                <select name="tipo" class="validate" >
-                                <option value=""></option>
-                                <option value="1">Costariccense</option>
+                            <?php
+                                $query = 'SELECT * FROM tipo_habitacion';
+                                $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+                                while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+                                    echo "<option value='".$line['id_tipo_habitacion']."'>".$line['nombre']."</option>";
+                                }
+                            ?>
+                                   
+                                   
                     </select>
                             
                         </div>
@@ -45,12 +51,12 @@ if (isset($_GET['rhotel'])){
                      <div>
                          <label>Precio</label>
                         <div class="input-field s12">
-                            <input type="text" class="validate" name="precio">
+                            $<input type="number" class="validate" name="precio">
                             
                         </div>
                     </div>   
                     <div>
-                         <label>Numero</label>
+                         <label>Numero de habitacion</label>
                         <div class="input-field s12">
                             <input type="number" class="validate" name="numero">
                         </div>

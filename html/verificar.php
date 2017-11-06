@@ -27,7 +27,7 @@ if (isset($_GET['rhotel'])){
     
 
     
-    //echo '<script>alert("Registrado con exito!"); window.location.href = "index.php";</script>';
+    echo '<script>alert("Registrado con exito!"); window.location.href = "index.php";</script>';
 }
 
 //---------------------------------------------------------

@@ -21,20 +21,26 @@
         <script>
             function initMap() {
                 var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 10,
+                    zoom: 8,
                     center: {
-                        lat: -33.9,
-                        lng: 151.2
+                        lat: 9.5151055,
+                        lng: -84.0388369
                     }
                 });
 
                 setMarkers(map);
             }
             var beaches = [
-                ['Bondi Beach <a href="d">asas</a>', -33.890542, 151.274856, 4],
-                ['Coogee Beach <a href="d">asas</a>', -33.923036, 151.259052, 5],
-                ['Cronulla Beach <a href="d">asas</a>', -34.028249, 151.157507, 3],
-                ['Manly Beach <a href="d">asas</a>', -33.80010128657071, 151.28747820854187, 2],
+
+                        <?php 
+                $query = 'SELECT * FROM hotel';
+                $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+                while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {  
+                    echo "['".$line['nombre']."',".$line['localizacion'].",".$line['id_hotel']."],";
+                }                   
+            ?>
+                
+                
                 ['Maroubra Beach <a href="d">asas</a>', -33.950198, 151.259302, 1]
             ];
             function setMarkers(map) {

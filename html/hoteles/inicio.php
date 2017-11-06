@@ -14,7 +14,7 @@
 
         $datos = array_merge($datos,$datos2,$datos3);
 
-        print_r($datos);
+        
 
 
 
@@ -28,7 +28,7 @@
 				<div class="db-left-2">
 					<ul>
 						<li>
-							<a href="?pag=<?php echo $_GET['pag']; ?>"> <img src="images/icon/db1.png" alt="" /> Cuenta</a>
+							<a href="?pag=<?php echo $_GET['pag']; ?>&pagina=cuenta"> <img src="images/icon/db1.png" alt="" /> Cuenta</a>
 						</li>
                          <li>
 							<a href="?pag=<?php echo $_GET['pag']; ?>&pagina=registro_habitaciones"> <img src="images/icon/db2.png" alt="" />Registro de Habitaciones</a>
@@ -53,7 +53,9 @@
                         
                         
                         <?php } ?>
-                        
+                        <li>
+                                <a href="?pag=<?php echo $_GET['pag']; ?>&pagina=facilidades"> <img src="images/icon/db2.png" alt="" />Facilidades</a>
+                            </li>
                          
 						<li>
 							<a href="?pag=salir"> <img src="images/icon/db8.png" alt="" /> Logout</a>
@@ -64,7 +66,7 @@
 			<div class="db-cent" style="padding: 55px;">
 			
                 <?php if(!isset($_GET['pagina'])){ 
-                        include "html/hoteles/cuenta.php";     
+                        include "html/hoteles/reportes.php";     
                     }else{
                         include "html/hoteles/".$_GET['pagina'].".php";    
                     }
