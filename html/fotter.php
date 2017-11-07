@@ -1,11 +1,5 @@
 </section>
 <!--END HEADER SECTION-->
-<section class="copy">
-    <div class="container">
-        <p>MyTravelHome - 2017</p>
-    </div>
-</section>
-<section>
 
     
     

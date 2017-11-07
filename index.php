@@ -3,16 +3,30 @@
     $link = mysql_connect('34.201.50.177', 'admin_admin', 'admin123')or die('No se pudo conectar: ' . mysql_error());
     mysql_select_db('admin_ceciliano') or die('No se pudo seleccionar la base de datos');
 
-   if (isset($_SESSION['usuario'])){
+    if (isset($_SESSION['usuario'])){
         $query = "SELECT `tipo` FROM `usuario` WHERE id_usuario = '".$_SESSION['usuario']."' ";
         $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
         $datos = mysql_fetch_array($result, MYSQL_ASSOC);
         $tipo =$datos['tipo']; 
+        
+        
+        $query = "SELECT * FROM `usuario` WHERE id_usuario = '".$_SESSION['usuario']."' ";
+        $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+        $datos = mysql_fetch_array($result, MYSQL_ASSOC);
+        $query = "SELECT * FROM `cliente` WHERE id_usuario = '".$_SESSION['usuario']."' ";
+        $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+        $datos2 = mysql_fetch_array($result, MYSQL_ASSOC);
+        
+        $datos = array_merge($datos,$datos2);
+        
+        
+        
+        
     }else{
         $tipo = 0; 
     }
-
-    /* if (isset($_SESSION['usuario'])){
+/*
+    if (isset($_SESSION['usuario'])){
         $query = "SELECT `tipo` FROM `usuario` WHERE id_usuario = '".$_SESSION['usuario']."' ";
         $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
 

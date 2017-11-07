@@ -15,7 +15,9 @@
         $datos = array_merge($datos,$datos2,$datos3);
 
         
-
+        $query1 = "SELECT * FROM `hotel` WHERE id_hotel = '".$datos['id_hotel']."' ";
+        $result1 = mysql_query($query1) or die('Consulta fallida: ' . mysql_error());
+        $hotel = mysql_fetch_array($result1, MYSQL_ASSOC);       
 
 
 ?>

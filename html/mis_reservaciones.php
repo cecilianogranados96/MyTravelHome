@@ -1,15 +1,15 @@
 <!--TOP SECTION-->
-	<br><br><br><br>	<div class="inn-body-section pad-bot-55">
+		<br><br><br><br><div class="inn-body-section pad-bot-55">
 			<div class="container">
 				<div class="row">
 					<div class="page-head">
-						<h2>Habitaciones en descuentos</h2>
+						<h2>Mis reservaciones</h2>
 						<div class="head-title">
 							<div class="hl-1"></div>
 							<div class="hl-2"></div>
 							<div class="hl-3"></div>
 						</div>
-						<p>Listado de habitaciones disponibles</p>
+						<p>Listado de reservaciones</p>
 					</div>
 					<!--ROOM SECTION-->
 					
@@ -17,7 +17,7 @@
                            <?php
                                 $facilidades = "";
                                 $precio = "";
-                                $query = 'SELECT habitacion.nombre as nombre_habitacion, hotel.nombre as nombre_hotel,hotel.id_hotel, habitacion.id_habitacion, habitacion.precio, habitacion.estado, categoria_hotel.nombre as categoria_hotel from habitacion INNER JOIN hotel on habitacion.id_hotel = hotel.id_hotel inner join categoria_hotel on categoria_hotel.id_categoria_hotel = hotel.categoria where habitacion.estado = 1';
+                                $query = 'SELECT habitacion.nombre as nombre_habitacion, hotel.nombre as nombre_hotel,hotel.id_hotel, habitacion.id_habitacion, habitacion.precio, habitacion.estado, categoria_hotel.nombre as categoria_hotel, reservacion.fecha_entrada,reservacion.fecha_salida from habitacion INNER JOIN hotel on habitacion.id_hotel = hotel.id_hotel inner join categoria_hotel on categoria_hotel.id_categoria_hotel = hotel.categoria INNER JOIN reservacion on reservacion.id_habitacion = habitacion.id_habitacion and reservacion.id_usuario = '.$_SESSION['usuario'].'';
                                 $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
                                 while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
                                     
@@ -73,8 +73,17 @@
 						</div>
 						<!--ROOM BOOKING BUTTON-->
 						<div class="r5 r-com">
-							<div class="r2-available">Disponible</div>
-							<p>Precio por noche</p> <a href="?pag=reservar&id='.$line['id_habitacion'].'" class="inn-room-book">Reservar</a> </div>
+                        
+                            <p>Fecha de entrada:</p>
+						
+                            <span class="room-price-1"> '.$line['fecha_entrada'].'</span>
+                            
+                            <p>Fecha de salida:</p>
+							
+                            <span class="room-price-1"> '.$line['fecha_salida'].'</span>
+                            
+                    
+							
 					</div>
                 ';
                                  

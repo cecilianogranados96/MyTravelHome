@@ -17,7 +17,6 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 </head>
-
 <body data-ng-app="">
     <!--MOBILE MENU-->
     <section>
@@ -57,14 +56,9 @@
                             <li><a href="?pag=descuentos">Descuentos</a></li>
                             <?php 
                             if (!isset($_SESSION['usuario'])){
-                                echo ' <li><a href="?pag=ingresar">Iniciar</a></li>
-                            
-                            <li><a href="?pag=registro">Registrarse</a></li>';
-                                
+                                echo ' <li><a href="?pag=ingresar">Iniciar</a></li><li><a href="?pag=registro">Registrarse</a></li>';
                             }else{
-                                echo ' <li><a href="#!" data-toggle="modal" data-target="#modal2">Mi cuenta </a></li>
-                            
-                            <li><a href="?pag=salir">Salir</a></li>';
+                                echo ' <li><a href="?pag=micuenta" >Mi cuenta </a></li>';
                             }
 
                             ?>
