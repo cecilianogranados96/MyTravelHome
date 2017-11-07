@@ -88,7 +88,7 @@ if (isset($_GET['verificar'])){
             echo '<script> window.location.href = "index.php?pag=plataforma/inicio";</script>';
         }
         if ( $datos['tipo'] == 0 ){
-            echo '<script> window.location.href = "index.php?pag=inicio";</script>';
+            echo '<script> window.location.href = "index.php?pag=micuenta";</script>';
         }
         
         

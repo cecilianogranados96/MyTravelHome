@@ -1,9 +1,9 @@
 <!--TOP SECTION-->
-		<div class="inn-body-section pad-bot-55">
+	<br><br><br><br>	<div class="inn-body-section pad-bot-55">
 			<div class="container">
 				<div class="row">
 					<div class="page-head">
-						<h2>Habitaciones disponibles</h2>
+						<h2>Habitaciones </h2>
 						<div class="head-title">
 							<div class="hl-1"></div>
 							<div class="hl-2"></div>
@@ -12,15 +12,42 @@
 						<p>Listado de habitaciones disponibles</p>
 					</div>
 					<!--ROOM SECTION-->
-					<div class="room">
+					
                         
+                           <?php
+                                $facilidades = "";
+                                $precio = "";
+                                $query = 'SELECT habitacion.nombre as nombre_habitacion, hotel.nombre as nombre_hotel,hotel.id_hotel, habitacion.id_habitacion, habitacion.precio, habitacion.estado, categoria_hotel.nombre as categoria_hotel from habitacion INNER JOIN hotel on habitacion.id_hotel = hotel.id_hotel inner join categoria_hotel on categoria_hotel.id_categoria_hotel = hotel.categoria where habitacion.estado = 1';
+                                $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+                                while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+                                    
+                                    
+                                    $result5 = mysql_query('SELECT descuento.porcentaje, agencia.nombre as nombre_agencia, agencia.foto from descuento INNER JOIN agencia on agencia.id_agencia = descuento.id_agencia WHERE descuento.id_habitacion =   '.$line['id_habitacion'].'');
+                                   $line5 = mysql_fetch_array($result5, MYSQL_ASSOC);
+
+                                   if(mysql_num_rows($result5) != 0 ){
+                                        $pre = $line['precio'] - round($line5['porcentaje'] / $line['precio'] * 100, 2) ;
+                                        $precio = '<p><span class="room-price-1">$'.$pre.'</span> <span class="room-price">$'.$line['precio'].'</span>';
+                                        $agencia = $line5['nombre_agencia'];
+                                        $foto = '<div class="ribbon ribbon-top-left"><span>Destacada</span></div><div class="r1 r-com"><img src="images/agencias/'.$line5['foto'].'"/></div>';
+                                   }else{
+                                        $precio = '<p><span class="room-price-1">$'.$line['precio'].'</span>';
+                                        $agencia = 'Directo - Hotel';
+                                       $foto = '<div class="r1 r-com"><img src="images/agencias/default.png"/></div>';
+                                   }
+                                    
+                                    
+                                    
+                                    $result3 = mysql_query('SELECT servicios_hotel.nombre from servicios_hotel INNER JOIN servicios_por_hotel on servicios_por_hotel.id_servicio = servicios_hotel.id_servicio_hotel where servicios_por_hotel.id_hotel = '.$line['id_hotel'].'');
+                                    while ($line3 = mysql_fetch_array($result3, MYSQL_ASSOC)) {
+                                        $facilidades .=  "<li>".$line3['nombre']."</li>";
+                                    }
+                                    echo '
+                                    <div class="room">
                         
-						<div class="ribbon ribbon-top-left"><span>Destacada</span></div>
-						
-						<div class="r1 r-com"><img src="images/room/1.jpg" alt="" /></div>
-						
+						'.$foto.'
 						<div class="r2 r-com">
-							<h4>Master Suite</h4>
+							<h4>'.$line['nombre_habitacion'].'</h4>
 							<div class="r2-ratt"> 
                                 <i class="fa fa-star"></i> 
                                 <i class="fa fa-star"></i> 
@@ -29,35 +56,38 @@
                                 <i class="fa fa-star"></i> 
                                 <span>Excellent  4.5 / 5</span> </div>
 							<ul>
-								<li>Max Adult : 3</li>
-								<li>Max Child : 1</li>
-								<li></li>
-								<li></li>
 							</ul>
 						</div>
 						
 						<div class="r3 r-com">
 							<ul>
-								<li>Ironing facilities</li>
-								<li>Tea/Coffee maker</li>
-								<li>Air conditioning</li>
-								<li>Flat-screen TV</li>
-								<li>Wake-up service</li>
+								'.$facilidades.'
 							</ul>
 						</div>
 						
 						<div class="r4 r-com">
 							<p>Precio por noche</p>
-							<p><span class="room-price-1">5000</span> <span class="room-price">$: 7000</span>
+							'.$precio.'
 							</p>
-							<p>No reembolsable</p>
+							<p>'.$agencia.'</p>
 						</div>
 						<!--ROOM BOOKING BUTTON-->
 						<div class="r5 r-com">
 							<div class="r2-available">Disponible</div>
-							<p>Precio por noche</p> <a href="room-details-block.html" class="inn-room-book">Reservar</a> </div>
+							<p>Precio por noche</p> <a href="?pag=reservar&id='.$line['id_habitacion'].'" class="inn-room-book">Reservar</a> </div>
 					</div>
-                
+                ';
+                                 
+                                    
+                                   $facilidades = "";
+                                  
+                                }
+                            ?>
+                        
+                        
+                        
+                        
+                  
 				</div>
 			</div>
 		</div>

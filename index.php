@@ -13,12 +13,14 @@
         $query = "SELECT * FROM `usuario` WHERE id_usuario = '".$_SESSION['usuario']."' ";
         $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
         $datos = mysql_fetch_array($result, MYSQL_ASSOC);
-        $query = "SELECT * FROM `cliente` WHERE id_usuario = '".$_SESSION['usuario']."' ";
-        $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
-        $datos2 = mysql_fetch_array($result, MYSQL_ASSOC);
         
-        $datos = array_merge($datos,$datos2);
-        
+        if ($tipo == 0){
+            $query = "SELECT * FROM `cliente` WHERE id_usuario = '".$_SESSION['usuario']."' ";
+            $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+            $datos2 = mysql_fetch_array($result, MYSQL_ASSOC);
+
+            $datos = array_merge($datos,$datos2);
+        }
         
         
         

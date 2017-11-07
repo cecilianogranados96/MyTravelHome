@@ -53,7 +53,7 @@
 							<a href="?pag=<?php echo $_GET['pag']; ?>&pagina=habitaciones"><img src="images/icon/h5.png" alt="" /> Habitaciones</a>
 						</li>
 						<li>
-							<a href="?pag=<?php echo $_GET['pag']; ?>&pagina=salir"><img src="images/icon/db8.png" alt="" /> Logout</a>
+							<a href="?pag=salir"><img src="images/icon/db8.png" alt="" /> Logout</a>
 						</li>
 					</ul>
 				</div>

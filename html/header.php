@@ -53,14 +53,13 @@
                         <ul>
                             <li><a href="index.php">Inicio</a></li>
                             <li><a href="?pag=hoteles">Hoteles</a></li>
-                            <li><a href="?pag=descuentos">Descuentos</a></li>
+                            <li><a href="?pag=habitaciones">Habitaciones</a></li>
                             <?php 
-                            if (!isset($_SESSION['usuario'])){
-                                echo ' <li><a href="?pag=ingresar">Iniciar</a></li><li><a href="?pag=registro">Registrarse</a></li>';
-                            }else{
-                                echo ' <li><a href="?pag=micuenta" >Mi cuenta </a></li>';
-                            }
-
+                                if (!isset($_SESSION['usuario'])){
+                                    echo '<li><a href="?pag=registro">Registrarse</a></li>';
+                                }else{
+                                    echo '<li><a href="?pag=micuenta" >Mi cuenta </a></li>';
+                                }
                             ?>
                         </ul>
                     </div>
