@@ -6,15 +6,18 @@
         $query = "SELECT usuario FROM `usuario` WHERE id_usuario = '".$_SESSION['usuario']."' ";
         $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
         $datos2 = mysql_fetch_array($result, MYSQL_ASSOC);
+        $query = "SELECT usuario as nombre FROM `usuario` WHERE id_usuario = '".$_SESSION['usuario']."' ";
+        $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+        $datos3 = mysql_fetch_array($result, MYSQL_ASSOC);    
         
-        $datos = array_merge($datos,$datos2);
+        $datos = array_merge($datos,$datos2,$datos3);
 
 ?>
 
     <div class="dashboard" style="margin-top: 0px !important;">
 			<div class="db-left">
 				<div class="db-left-1">
-                     <br> <br>                    
+                    <h4>Administrador</h4>                    
 				</div>
 				<div class="db-left-2">
 					<ul>

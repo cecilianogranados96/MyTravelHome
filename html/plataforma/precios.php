@@ -100,7 +100,10 @@ if (isset($_GET['insert'])){
                     <center>Precio final </center>
                 </th>
                 <th>
-                    <center>Editar/Borrar</center>
+                    <center>Editar</center>
+                </th>
+                <th>
+                    <center>Borrar</center>
                 </th>
             </tr>
         </thead>
@@ -118,7 +121,10 @@ if (isset($_GET['insert'])){
                                     <center>".$line['precio_final']."</center>
                                 </td>
                                 <td>
-                                    <center><a href='?pag=".$_GET['pag']."&pagina=".$_GET['pagina']."&edit=".$line['id_rango']."' class='btn btn-success'>Editar</a><a href='?pag=".$_GET['pag']."&pagina=".$_GET['pagina']."&borr=".$line['id_rango']."' class='btn btn-danger'>Borrar</a></center>
+                                    <center><a href='?pag=".$_GET['pag']."&pagina=".$_GET['pagina']."&edit=".$line['id_rango']."' class='btn btn-success'>Editar</a></center>
+                                </td>
+                                <td>
+                                    <center><a href='?pag=".$_GET['pag']."&pagina=".$_GET['pagina']."&borr=".$line['id_rango']."' class='btn btn-danger'>Borrar</a></center>
                                 </td>
                             </tr>
                 ";

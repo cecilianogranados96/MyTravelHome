@@ -86,7 +86,10 @@ if (isset($_GET['insert'])){
                     <center>Nombre </center>
                 </th>
                 <th>
-                    <center>Editar/Borrar</center>
+                    <center>Editar</center>
+                </th>
+                <th>
+                    <center>Borrar</center>
                 </th>
             </tr>
         </thead>
@@ -100,9 +103,11 @@ if (isset($_GET['insert'])){
                                 <td>
                                     <center>".$line['nombre']."</center>
                                 </td>
-                                
                                 <td>
-                                    <center><a href='?pag=".$_GET['pag']."&pagina=".$_GET['pagina']."&edit=".$line['id_servicio_hotel']."' class='btn btn-success'>Editar</a><a href='?pag=".$_GET['pag']."&pagina=".$_GET['pagina']."&borr=".$line['id_servicio_hotel']."' class='btn btn-danger'>Borrar</a></center>
+                                    <center><a href='?pag=".$_GET['pag']."&pagina=".$_GET['pagina']."&edit=".$line['id_servicio_hotel']."' class='btn btn-success'>Editar</a></center>
+                                </td>
+                                <td>
+                                    <center><a href='?pag=".$_GET['pag']."&pagina=".$_GET['pagina']."&borr=".$line['id_servicio_hotel']."' class='btn btn-danger'>Borrar</a></center>
                                 </td>
                             </tr>
                 ";
