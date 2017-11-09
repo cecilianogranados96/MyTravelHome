@@ -1,7 +1,8 @@
 
 <?php 
+$where = "";
 if (isset($_GET['buscar'])){    
-        $where = "";
+        $where = "where ";
         foreach ($_POST['servicios'] as $option_value)
         {            
        
@@ -76,7 +77,7 @@ if (isset($_GET['buscar'])){
             
             <?php 
                 $estrellas = "";
-                $query = 'SELECT hotel.nombre,hotel.id_hotel, distrito.nombre as distrito, tipo_hotel.nombre as tipo_hotel, hotel.estado, categoria_hotel.nombre as categoria_hotel from hotel INNER join distrito on distrito.id_distrito = hotel.distrito inner join tipo_hotel on tipo_hotel.id_tipo_hotel = hotel.tipo_hotel inner join categoria_hotel on categoria_hotel.id_categoria_hotel = hotel.categoria INNER join servicios_por_hotel on servicios_por_hotel.id_hotel = hotel.id_hotel where '.$where.'';
+                $query = 'SELECT hotel.nombre,hotel.id_hotel, distrito.nombre as distrito, tipo_hotel.nombre as tipo_hotel, hotel.estado, categoria_hotel.nombre as categoria_hotel from hotel INNER join distrito on distrito.id_distrito = hotel.distrito inner join tipo_hotel on tipo_hotel.id_tipo_hotel = hotel.tipo_hotel inner join categoria_hotel on categoria_hotel.id_categoria_hotel = hotel.categoria INNER join servicios_por_hotel on servicios_por_hotel.id_hotel = hotel.id_hotel '.$where.'';
                 $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
                 while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {  
                     

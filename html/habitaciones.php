@@ -99,16 +99,13 @@
 						'.$foto.'
 						<div class="r2 r-com">
 							<h4>'.$line['nombre_habitacion'].'</h4>
-							<div class="r2-ratt"> 
+							<div class="r2-ratt" style="font-size: initial;"> 
                             <br>
                                 <center>
-                                '.$estrellas.'
-                                <br>
+                                Estellas: '.$estrellas.' '.$calificacion.' / 5
                                 
                                 </center>
-                                <span>Excellent  '.$calificacion.' / 5</span> 
-                                
-                                <br><hr><br>
+                                <hr>
                                 ';
                         if(isset($_SESSION['usuario'])){
                                 echo 'Calificar:<br>
@@ -143,8 +140,14 @@ echo '
 						</div>
 						<!--ROOM BOOKING BUTTON-->
 						<div class="r5 r-com">
-							<div class="r2-available">Disponible</div>
-							<p>Precio por noche</p> <a href="?pag=reservar&id='.$line['id_habitacion'].'" class="inn-room-book">Reservar</a> </div>
+							
+							<p>Precio por noche</p> <a href="?pag=reservar&id='.$line['id_habitacion'].'" class="inn-room-book">Reservar</a> 
+                            <br><br><center>
+<a href="?pag=comentarios&id_hotel='.$line['id_hotel'].'" class="btn btn-success">Ver Comentarios</a>
+
+</div>
+                            
+                            
 					</div>
                 ';
                                  

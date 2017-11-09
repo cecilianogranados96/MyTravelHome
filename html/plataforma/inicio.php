@@ -35,7 +35,9 @@
 							<a href="?pag=<?php echo $_GET['pag']; ?>&pagina=hoteles"><img src="images/icon/h5.png" alt="" /> Hoteles</a>
 						</li>
                         
-
+                        <li>
+							<a href="?pag=<?php echo $_GET['pag']; ?>&pagina=aportes"><img src="images/icon/h2.png" alt="" /> Aportes</a>
+						</li>
                         
 						<li>
 							<a href="?pag=<?php echo $_GET['pag']; ?>&pagina=categorias"><img src="images/icon/h1.png" alt="" /> Categorías</a>
