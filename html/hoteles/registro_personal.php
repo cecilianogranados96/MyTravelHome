@@ -1,7 +1,7 @@
 
 
 <?php 
-print_r($datos);
+
 if (isset($_GET['rhotel'])){
     $query = "INSERT INTO `usuario`(`usuario`, `contrasena`, `tipo`) VALUES ('".$_POST['user']."','".md5($_POST['pass'])."',1)";
     $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());

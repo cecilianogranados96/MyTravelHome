@@ -1,7 +1,11 @@
 <?php 
  session_start();
-    $link = mysql_connect('34.201.50.177', 'admin_admin', 'admin123')or die('No se pudo conectar: ' . mysql_error());
-    mysql_select_db('admin_ceciliano') or die('No se pudo seleccionar la base de datos');
+
+    //$link = mysql_connect('34.201.50.177', 'admin_admin', 'admin123')or die('No se pudo conectar: ' . mysql_error());
+
+    $link = mysql_connect('localhost', 'root', '')or die('No se pudo conectar: ' . mysql_error());
+
+    mysql_select_db('MyTravelHome') or die('No se pudo seleccionar la base de datos');
 
     if (isset($_SESSION['usuario'])){
         $query = "SELECT `tipo` FROM `usuario` WHERE id_usuario = '".$_SESSION['usuario']."' ";
@@ -21,9 +25,7 @@
 
             $datos = array_merge($datos,$datos2);
         }
-        
-        
-        
+                
     }else{
         $tipo = 0; 
     }

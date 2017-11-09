@@ -1,5 +1,24 @@
 <!--TOP SECTION-->
-		<br><br><br><br><div class="inn-body-section pad-bot-55">
+		<br><br><br><br>
+
+<?php
+
+if(isset($_GET['borrar'])){
+    $query = "UPDATE `habitacion` SET `estado`=1 WHERE `id_habitacion`= '".$_GET['habitacion']."'";
+        $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+    $query = "DELETE FROM `reservacion` WHERE `id_reservacion` = ".$_GET['borrar']."";
+        $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+    
+      echo '<script>alert("Eliminado con exito!"); </script>';
+    
+    
+    
+}
+
+
+
+?>
+<div class="inn-body-section pad-bot-55">
 			<div class="container">
 				<div class="row">
 					<div class="page-head">
@@ -17,7 +36,7 @@
                            <?php
                                 $facilidades = "";
                                 $precio = "";
-                                $query = 'SELECT habitacion.nombre as nombre_habitacion, hotel.nombre as nombre_hotel,hotel.id_hotel, habitacion.id_habitacion, habitacion.precio, habitacion.estado, categoria_hotel.nombre as categoria_hotel, reservacion.fecha_entrada,reservacion.fecha_salida from habitacion INNER JOIN hotel on habitacion.id_hotel = hotel.id_hotel inner join categoria_hotel on categoria_hotel.id_categoria_hotel = hotel.categoria INNER JOIN reservacion on reservacion.id_habitacion = habitacion.id_habitacion and reservacion.id_usuario = '.$_SESSION['usuario'].'';
+                                $query = 'SELECT habitacion.nombre as nombre_habitacion, hotel.nombre as nombre_hotel,hotel.id_hotel,reservacion.id_reservacion,habitacion.id_habitacion, habitacion.precio, habitacion.estado, categoria_hotel.nombre as categoria_hotel, reservacion.fecha_entrada,reservacion.fecha_salida from habitacion INNER JOIN hotel on habitacion.id_hotel = hotel.id_hotel inner join categoria_hotel on categoria_hotel.id_categoria_hotel = hotel.categoria INNER JOIN reservacion on reservacion.id_habitacion = habitacion.id_habitacion and reservacion.id_usuario = '.$_SESSION['usuario'].'';
                                 $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
                                 while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
                                     
@@ -82,7 +101,7 @@
 							
                             <span class="room-price-1"> '.$line['fecha_salida'].'</span>
                             
-                    
+                     <h2><a href="?pag=mis_reservaciones&borrar='.$line['id_reservacion'].'&habitacion='.$line['id_habitacion'].'" class="btn btn-danger">Eliminar</a></h2>
 							
 					</div>
                 ';

@@ -1,11 +1,15 @@
-<div class="inn-body-section pad-bot-55">
-    <div class="db-cent-table db-com-table">
-        <div class="db-title">
-            <center>
-                <h3><img src="images/icon/dbc6.png" alt="" />Mapa de hoteles</h3>
-                <p>Se insertan las categorias de un hotel</p>
-            </center>
-        </div>
+	<br><br><br><br>	<div class="inn-body-section pad-bot-55">
+			<div class="container">
+				<div class="row">
+					<div class="page-head">
+						<h2>Hoteles </h2>
+						<div class="head-title">
+							<div class="hl-1"></div>
+							<div class="hl-2"></div>
+							<div class="hl-3"></div>
+						</div>
+						<p>Listado de hoteles disponibles</p>
+					</div>
         <style>
         #map {
             height: 100%;
@@ -36,7 +40,17 @@
                 $query = 'SELECT * FROM hotel';
                 $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
                 while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {  
-                    echo "['".$line['nombre']."',".$line['localizacion'].",".$line['id_hotel']."],";
+                    
+                    $id_hotel = $line['id_hotel'];
+                    $nombre = $line['nombre'];
+                    $localizacion = $line['localizacion'];
+                    
+                    echo " 
+                    ['<center> $nombre <br> <a href=".'"'."?pag=habitaciones&hotel=$id_hotel ".'"'.">Ver habitaciones</a> </center>',
+                    
+                    $localizacion,
+                    
+                    $id_hotel],";
                 }                   
             ?>
                 

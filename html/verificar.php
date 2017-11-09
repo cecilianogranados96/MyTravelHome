@@ -1,8 +1,6 @@
 <br><br><br><br><br><br><br><br><br><?php 
 
 if (isset($_GET['rhotel'])){
-
-    
         $query = "INSERT INTO `hotel`(`nombre`, `tipo_hotel`, `caracteristica`, `distrito`, `localizacion`, `rango_precio`, `categoria`) VALUES (
         '".$_POST['nombre_hotel']."',
         '".$_POST['tipo_hotel']."',
@@ -13,29 +11,22 @@ if (isset($_GET['rhotel'])){
         '".$_POST['categoria']."')";
         $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
     
-    
         $hotel = mysql_insert_id();
     
         $query = "INSERT INTO `usuario`(`usuario`, `contrasena`, `tipo`) VALUES ('".$_POST['user']."','".md5($_POST['pass'])."',1)";
         $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
-   
-    
-    
+
         $query = "INSERT INTO `adm_hotel`(`id_usuario`, `nombre`, `apellido`, `nacionalidad`, `genero`, `cedula`, `admin`,`id_hotel`) 
         VALUES ('".mysql_insert_id()."','".$_POST['apellido_p']."','".$_POST['apellido_p']."','".$_POST['nacionalidad']."','".$_POST['genero']."','".$_POST['cedula']."','".$_POST['admin']."','".$hotel."')";
         $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
-    
 
-    
-    echo '<script>alert("Registrado con exito!"); window.location.href = "index.php";</script>';
+        echo '<script>alert("Registrado con exito!"); window.location.href = "index.php";</script>';
 }
 
 //---------------------------------------------------------
 if (isset($_GET['ragencia'])){
-    
     $query = "INSERT INTO `usuario` (`usuario`, `contrasena`, `tipo`) VALUES ('".$_POST['user']."','".md5($_POST['pass'])."',2)";
     $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
-    
     
     $uploaddir = 'images/agencias/';
     $foto_url = rand().$_FILES['foto']['name'];
@@ -44,15 +35,13 @@ if (isset($_GET['ragencia'])){
     
     $query = "INSERT INTO `agencia`(`id_usuario`, `nombre`, `foto`) VALUES ('".mysql_insert_id()."','".$_POST['nombre_agencia']."','".$foto_url."')";
     $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
-    echo '<script>alert("Registrado con exito!"); window.location.href = "index.php";</script>';
     
+    echo '<script>alert("Registrado con exito!"); window.location.href = "index.php";</script>';
 }
 
 //---------------------------------------------------------
-
-
 if (isset($_GET['rcliente'])){
-    
+
     $query = "INSERT INTO `usuario` (`usuario`, `contrasena`, `tipo`) VALUES ('".$_POST['user']."','".md5($_POST['pass'])."',0)";
     $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
     

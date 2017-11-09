@@ -1,11 +1,16 @@
-/*'SELECT `hotel`.`nombre`, `tipo_hotel`.`nombre`, `distrito`.`nombre`, `hotel`.`estado`, `rango_precio`.`precio_inicial`, `rango_precio`.`precio_final` FROM `tipo_hotel` INNER JOIN `hotel` ON `hotel`.`tipo_hotel` = `tipo_hotel`.`id_tipo_hotel` INNER JOIN `calificacion` ON `calificacion`.`id_hotel` = `hotel`.`id_hotel` INNER JOIN `categoria_hotel` ON `hotel`.`categoria` = `categoria_hotel`.`id_categoria_hotel` INNER JOIN `distrito` ON `hotel`.`distrito` = `distrito`.`id_distrito` INNER JOIN `rango_precio` ON `hotel`.`rango_precio` = `rango_precio`.`id_rango` '*/
 
 <?php 
 if (isset($_GET['buscar'])){    
+        $where = "";
         foreach ($_POST['servicios'] as $option_value)
         {            
-            $seleccionados [] = $option_value;
+       
+            $where .= "servicios_por_hotel.id_servicio = ".$option_value." or ";
+            
         }
+    $where = substr($where, 0,-3);
+    //echo $where;
+    
 }
 ?>
 
@@ -42,6 +47,7 @@ if (isset($_GET['buscar'])){
         </div>
     </form>
     <div>
+        <br><br>
     <table class="bordered responsive-table">
         <thead>
             <tr>
@@ -52,46 +58,69 @@ if (isset($_GET['buscar'])){
                     <center>Distrito</center>
                 </th>
                 <th>
-                    <center>Provincia</center>
-                </th>
-                <th>
-                    <center>Tipo </center>
-                </th>
-                <th>
-                    <center>Estado</center>
-                </th>
-                <th>
                     <center>Categoría </center>
+                </th>
+                 <th>
+                    <center>Tipo</center>
                 </th>
                 <th>
                     <center>Puntaje</center>
                 </th>
+               
                 <th>
-                    <center>Provincia</center>
-                </th>
-                <th>
-                    <center>Rango precio</center>
+                    <center>Estado</center>
                 </th>
             </tr>
         </thead>
         <tbody>
             
             <?php 
-                $query = 'SELECT id_hotel, nombre, tipo_hotel from hotel';
+                $estrellas = "";
+                $query = 'SELECT hotel.nombre,hotel.id_hotel, distrito.nombre as distrito, tipo_hotel.nombre as tipo_hotel, hotel.estado, categoria_hotel.nombre as categoria_hotel from hotel INNER join distrito on distrito.id_distrito = hotel.distrito inner join tipo_hotel on tipo_hotel.id_tipo_hotel = hotel.tipo_hotel inner join categoria_hotel on categoria_hotel.id_categoria_hotel = hotel.categoria INNER join servicios_por_hotel on servicios_por_hotel.id_hotel = hotel.id_hotel where '.$where.'';
                 $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
                 while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {  
+                    
+                    if ($line['estado'] == 1){
+                        $estado = "Activo";
+                    }else{
+                        $estado = "Desactivado";
+                    }
+                    
+                    $cal = mysql_query('SELECT avg(`puntaje`) as cal from calificacion WHERE id_hotel = '.$line['id_hotel'].'');
+                    $call = mysql_fetch_array($cal, MYSQL_ASSOC); 
+                                    
+                    if (round($call['cal'],0) == 0){
+                        $calificacion =  5;
+                    }else{
+                        $calificacion =  round($call['cal'],0);
+                    }
+                    for ($x=0;$x<$calificacion;$x++){
+                            $estrellas .= '<i class="fa fa-star"></i>';
+                    }
+                
                     echo "    <tr>
                                 <td>
                                     <center>".$line['nombre']."</center>
                                 </td>
                                 <td>
+                                    <center>".$line['distrito']."</center>
+                                </td>
+                                <td>
+                                    <center>".$line['categoria_hotel']."</center>
+                                </td>
+                                <td>
                                     <center>".$line['tipo_hotel']."</center>
                                 </td>
                                 <td>
-                                    <center>".$line['nombre']."</center>
+                                    <center> $estrellas (".$calificacion.") </center>
+                                </td>
+                                <td>
+                                    <center>".$estado."</center>
                                 </td>
                             </tr>
                 ";
+                    $estado = "";
+                    $estrellas = "";
                 }                   
             ?>
  
