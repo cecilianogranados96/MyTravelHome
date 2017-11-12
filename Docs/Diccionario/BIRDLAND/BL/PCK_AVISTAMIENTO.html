@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+ <LINK REL="STYLESHEET" TYPE="text/css" HREF="../../plsqldoc.css">
+ <TITLE>Package BL."PCK_AVISTAMIENTO"</TITLE>
+ <META name="object" content="PACKAGE">
+ <META name="name" content="BIRDLAND BL."PCK_AVISTAMIENTO"">
+ <META name="description" content="">
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%"><TR>
+<TD><P ALIGN="LEFT"><STRONG><SMALL>BL@BIRDLAND</SMALL></STRONG></TD>
+<TD><P ALIGN="RIGHT"><STRONG><SMALL><A HREF="../../index.html">index</A></SMALL></STRONG></TD>
+</TR></TABLE>
+<TABLE CLASS="MAIN_TABLE"><TR><TD CLASS="DESC_TEXT">
+<P CLASS="MAIN_TITLE">Package BL."PCK_AVISTAMIENTO"</P>
+
+<BR>
+</TD></TR></TABLE>
+<HR>
+<A NAME="Program units"></A>
+<TABLE CLASS="SUB_TABLE"><TR><TD CLASS="SUB_TITLE">
+Program units
+</TD></TR></TABLE>
+<TABLE CLASS="SUB_TABLE">
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#DELETE_AVISTAMIENTO">delete_avistamiento</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#UPDATE_AVISTAMIENTO">update_avistamiento</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#INSERT_AVISTAMIENTO">insert_avistamiento</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#TOTAL_AVISTAMIENTO">total_avistamiento</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#TOTAL_AVISTAMIENTO_PERSONA">total_avistamiento_persona</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#AVE_CANTIDAD">ave_cantidad</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#AVISTAMIENTO_AVE">avistamiento_ave</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#AVISTAMIENTO_GENERAL">avistamiento_general</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#AVISTAMIENTO_PERSONA">avistamiento_persona</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#AVISTAMIENTO_COMPLETO">avistamiento_completo</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#AVISTAMIENTO_ID">avistamiento_id</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#AVISTAMIENTO_CANTIDAD">avistamiento_cantidad</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#AVISTAMIENTO_AVE_ID">avistamiento_ave_id</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#AVISTAMIENTO_PERSONA_ID">avistamiento_persona_id</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="DELETE_AVISTAMIENTO"></A>
+<P CLASS="TYPE_TITLE">
+delete_avistamiento
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure delete_avistamiento(pId NUMBER)
+
+</PRE>
+<HR>
+<A NAME="UPDATE_AVISTAMIENTO"></A>
+<P CLASS="TYPE_TITLE">
+update_avistamiento
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure update_avistamiento(pid_avistamiento number,
+                              pid_persona      NUMBER,
+                              pid_ave          NUMBER,
+                              platitud         NUMBER,
+                              plongitud        number,
+                              pfoto            varchar2)
+
+</PRE>
+<HR>
+<A NAME="INSERT_AVISTAMIENTO"></A>
+<P CLASS="TYPE_TITLE">
+insert_avistamiento
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure insert_avistamiento(pid_persona NUMBER,
+                              pid_ave     NUMBER,
+                              platitud    NUMBER,
+                              plongitud   number,
+                              pfoto       varchar2)
+
+</PRE>
+<HR>
+<A NAME="TOTAL_AVISTAMIENTO"></A>
+<P CLASS="TYPE_TITLE">
+total_avistamiento
+</P>
+<PRE CLASS="DECL_TEXT">
+Function total_avistamiento RETURN VARCHAR2
+
+</PRE>
+<HR>
+<A NAME="TOTAL_AVISTAMIENTO_PERSONA"></A>
+<P CLASS="TYPE_TITLE">
+total_avistamiento_persona
+</P>
+<PRE CLASS="DECL_TEXT">
+Function total_avistamiento_persona(pid_persona NUMBER) RETURN VARCHAR2
+
+</PRE>
+<HR>
+<A NAME="AVE_CANTIDAD"></A>
+<P CLASS="TYPE_TITLE">
+ave_cantidad
+</P>
+<PRE CLASS="DECL_TEXT">
+Function ave_cantidad RETURN ave_cantidad_record
+
+</PRE>
+<HR>
+<A NAME="AVISTAMIENTO_AVE"></A>
+<P CLASS="TYPE_TITLE">
+avistamiento_ave
+</P>
+<PRE CLASS="DECL_TEXT">
+Function avistamiento_ave(pid_ave NUMBER) RETURN avistamiento_record
+
+</PRE>
+<HR>
+<A NAME="AVISTAMIENTO_GENERAL"></A>
+<P CLASS="TYPE_TITLE">
+avistamiento_general
+</P>
+<PRE CLASS="DECL_TEXT">
+Function avistamiento_general RETURN avistamiento_general_record
+
+</PRE>
+<HR>
+<A NAME="AVISTAMIENTO_PERSONA"></A>
+<P CLASS="TYPE_TITLE">
+avistamiento_persona
+</P>
+<PRE CLASS="DECL_TEXT">
+Function avistamiento_persona(pid_persona NUMBER)
+  RETURN avistamiento_persona_record
+
+</PRE>
+<HR>
+<A NAME="AVISTAMIENTO_COMPLETO"></A>
+<P CLASS="TYPE_TITLE">
+avistamiento_completo
+</P>
+<PRE CLASS="DECL_TEXT">
+Function avistamiento_completo RETURN avistamiento_completo_record
+
+</PRE>
+<HR>
+<A NAME="AVISTAMIENTO_ID"></A>
+<P CLASS="TYPE_TITLE">
+avistamiento_id
+</P>
+<PRE CLASS="DECL_TEXT">
+Function avistamiento_id(pid_avistamiento NUMBER)
+  RETURN avistamiento_persona_record
+
+</PRE>
+<HR>
+<A NAME="AVISTAMIENTO_CANTIDAD"></A>
+<P CLASS="TYPE_TITLE">
+avistamiento_cantidad
+</P>
+<PRE CLASS="DECL_TEXT">
+Function avistamiento_cantidad RETURN avistamiento_cantidad_record
+
+</PRE>
+<HR>
+<A NAME="AVISTAMIENTO_AVE_ID"></A>
+<P CLASS="TYPE_TITLE">
+avistamiento_ave_id
+</P>
+<PRE CLASS="DECL_TEXT">
+Function avistamiento_ave_id(pid_ave NUMBER) RETURN avistamiento_ave_record
+
+</PRE>
+<HR>
+<A NAME="AVISTAMIENTO_PERSONA_ID"></A>
+<P CLASS="TYPE_TITLE">
+avistamiento_persona_id
+</P>
+<PRE CLASS="DECL_TEXT">
+Function avistamiento_persona_id(pid_persona NUMBER)
+  RETURN avistamiento_ave_record
+
+</PRE>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+</BODY>
+</HTML>

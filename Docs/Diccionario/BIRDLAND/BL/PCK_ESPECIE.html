@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+ <LINK REL="STYLESHEET" TYPE="text/css" HREF="../../plsqldoc.css">
+ <TITLE>Package BL."PCK_ESPECIE"</TITLE>
+ <META name="object" content="PACKAGE">
+ <META name="name" content="BIRDLAND BL."PCK_ESPECIE"">
+ <META name="description" content="">
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%"><TR>
+<TD><P ALIGN="LEFT"><STRONG><SMALL>BL@BIRDLAND</SMALL></STRONG></TD>
+<TD><P ALIGN="RIGHT"><STRONG><SMALL><A HREF="../../index.html">index</A></SMALL></STRONG></TD>
+</TR></TABLE>
+<TABLE CLASS="MAIN_TABLE"><TR><TD CLASS="DESC_TEXT">
+<P CLASS="MAIN_TITLE">Package BL."PCK_ESPECIE"</P>
+
+<BR>
+</TD></TR></TABLE>
+<HR>
+<A NAME="Program units"></A>
+<TABLE CLASS="SUB_TABLE"><TR><TD CLASS="SUB_TITLE">
+Program units
+</TD></TR></TABLE>
+<TABLE CLASS="SUB_TABLE">
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#DELETE_ESPECIE">delete_especie</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#UPDATE_ESPECIE">update_especie</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#INSERT_ESPECIE">insert_especie</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#ESPECIE_NOMBRE">especie_nombre</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#GENERO_ID">genero_id</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#GENERO_NOMBRE">genero_nombre</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#TOTAL_ESPECIE">total_especie</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#ESPECIE_GENERO">especie_genero</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#ESPECIE_GENERO_ID">especie_genero_id</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="DELETE_ESPECIE"></A>
+<P CLASS="TYPE_TITLE">
+delete_especie
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure delete_especie(pId NUMBER)
+
+</PRE>
+<HR>
+<A NAME="UPDATE_ESPECIE"></A>
+<P CLASS="TYPE_TITLE">
+update_especie
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure update_especie(pId NUMBER, pnombre VARCHAR2, pIdC NUMBER)
+
+</PRE>
+<HR>
+<A NAME="INSERT_ESPECIE"></A>
+<P CLASS="TYPE_TITLE">
+insert_especie
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure insert_especie(pnombre VARCHAR2, pIdC NUMBER)
+
+</PRE>
+<HR>
+<A NAME="ESPECIE_NOMBRE"></A>
+<P CLASS="TYPE_TITLE">
+especie_nombre
+</P>
+<PRE CLASS="DECL_TEXT">
+Function especie_nombre(pId NUMBER) RETURN VARCHAR2
+
+</PRE>
+<HR>
+<A NAME="GENERO_ID"></A>
+<P CLASS="TYPE_TITLE">
+genero_id
+</P>
+<PRE CLASS="DECL_TEXT">
+Function genero_id(pId NUMBER) RETURN VARCHAR2
+
+</PRE>
+<HR>
+<A NAME="GENERO_NOMBRE"></A>
+<P CLASS="TYPE_TITLE">
+genero_nombre
+</P>
+<PRE CLASS="DECL_TEXT">
+Function genero_nombre(pId NUMBER) RETURN VARCHAR2
+
+</PRE>
+<HR>
+<A NAME="TOTAL_ESPECIE"></A>
+<P CLASS="TYPE_TITLE">
+total_especie
+</P>
+<PRE CLASS="DECL_TEXT">
+Function total_especie RETURN VARCHAR2
+
+</PRE>
+<HR>
+<A NAME="ESPECIE_GENERO"></A>
+<P CLASS="TYPE_TITLE">
+especie_genero
+</P>
+<PRE CLASS="DECL_TEXT">
+Function especie_genero RETURN especie_genero_record
+
+</PRE>
+<HR>
+<A NAME="ESPECIE_GENERO_ID"></A>
+<P CLASS="TYPE_TITLE">
+especie_genero_id
+</P>
+<PRE CLASS="DECL_TEXT">
+Function especie_genero_id(pid_genero NUMBER) RETURN especie_record
+
+</PRE>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+</BODY>
+</HTML>

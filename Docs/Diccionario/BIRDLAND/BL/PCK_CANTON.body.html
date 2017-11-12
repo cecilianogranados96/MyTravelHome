@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+ <LINK REL="STYLESHEET" TYPE="text/css" HREF="../../plsqldoc.css">
+ <TITLE>Package body BL."PCK_CANTON"</TITLE>
+ <META name="object" content="PACKAGE BODY">
+ <META name="name" content="BIRDLAND BL."PCK_CANTON"">
+ <META name="description" content="">
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%"><TR>
+<TD><P ALIGN="LEFT"><STRONG><SMALL>BL@BIRDLAND</SMALL></STRONG></TD>
+<TD><P ALIGN="RIGHT"><STRONG><SMALL><A HREF="../../index.html">index</A></SMALL></STRONG></TD>
+</TR></TABLE>
+<TABLE CLASS="MAIN_TABLE"><TR><TD CLASS="DESC_TEXT">
+<P CLASS="MAIN_TITLE">Package body BL."PCK_CANTON"</P>
+
+<BR>
+</TD></TR></TABLE>
+<HR>
+<A NAME="Program units"></A>
+<TABLE CLASS="SUB_TABLE"><TR><TD CLASS="SUB_TITLE">
+Program units
+</TD></TR></TABLE>
+<TABLE CLASS="SUB_TABLE">
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#DELETE_CANTON">delete_canton</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#UPDATE_CANTON">update_canton</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#INSERT_CANTON">insert_canton</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#CANTON_NOMBRE">canton_nombre</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#PROVINCIA_ID">provincia_id</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#PROVINCIA_NOMBRE">provincia_nombre</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#TOTAL_CANTON">total_canton</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#CANTON_PROVINCIA">canton_provincia</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#CANTON_GENERAL">canton_general</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="DELETE_CANTON"></A>
+<P CLASS="TYPE_TITLE">
+delete_canton
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure delete_canton(pId NUMBER)
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="UPDATE_CANTON"></A>
+<P CLASS="TYPE_TITLE">
+update_canton
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure update_canton(pId NUMBER, pNombre VARCHAR2, pIdC NUMBER)
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="INSERT_CANTON"></A>
+<P CLASS="TYPE_TITLE">
+insert_canton
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure insert_canton(pNombre VARCHAR2, pIdC NUMBER)
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="CANTON_NOMBRE"></A>
+<P CLASS="TYPE_TITLE">
+canton_nombre
+</P>
+<PRE CLASS="DECL_TEXT">
+Function canton_nombre(pId NUMBER) return VARCHAR2
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="PROVINCIA_ID"></A>
+<P CLASS="TYPE_TITLE">
+provincia_id
+</P>
+<PRE CLASS="DECL_TEXT">
+Function provincia_id(pId NUMBER) return VARCHAR2
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="PROVINCIA_NOMBRE"></A>
+<P CLASS="TYPE_TITLE">
+provincia_nombre
+</P>
+<PRE CLASS="DECL_TEXT">
+Function provincia_nombre(pId NUMBER) return VARCHAR2
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="TOTAL_CANTON"></A>
+<P CLASS="TYPE_TITLE">
+total_canton
+</P>
+<PRE CLASS="DECL_TEXT">
+Function total_canton RETURN VARCHAR2
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="CANTON_PROVINCIA"></A>
+<P CLASS="TYPE_TITLE">
+canton_provincia
+</P>
+<PRE CLASS="DECL_TEXT">
+Function canton_provincia RETURN canton_provincia_record
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="CANTON_GENERAL"></A>
+<P CLASS="TYPE_TITLE">
+canton_general
+</P>
+<PRE CLASS="DECL_TEXT">
+Function canton_general RETURN canton_general_record
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+</BODY>
+</HTML>

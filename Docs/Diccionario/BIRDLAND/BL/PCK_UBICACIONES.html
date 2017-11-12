@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+ <LINK REL="STYLESHEET" TYPE="text/css" HREF="../../plsqldoc.css">
+ <TITLE>Package BL."PCK_UBICACIONES"</TITLE>
+ <META name="object" content="PACKAGE">
+ <META name="name" content="BIRDLAND BL."PCK_UBICACIONES"">
+ <META name="description" content="">
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%"><TR>
+<TD><P ALIGN="LEFT"><STRONG><SMALL>BL@BIRDLAND</SMALL></STRONG></TD>
+<TD><P ALIGN="RIGHT"><STRONG><SMALL><A HREF="../../index.html">index</A></SMALL></STRONG></TD>
+</TR></TABLE>
+<TABLE CLASS="MAIN_TABLE"><TR><TD CLASS="DESC_TEXT">
+<P CLASS="MAIN_TITLE">Package BL."PCK_UBICACIONES"</P>
+
+<BR>
+</TD></TR></TABLE>
+<HR>
+<A NAME="Program units"></A>
+<TABLE CLASS="SUB_TABLE"><TR><TD CLASS="SUB_TITLE">
+Program units
+</TD></TR></TABLE>
+<TABLE CLASS="SUB_TABLE">
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#INSERT_UBICACION">insert_ubicacion</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#DELETE_UBICACION">delete_ubicacion</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#UBICACION_CANTON">ubicacion_canton</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#TOTAL_UBICACION">total_ubicacion</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="INSERT_UBICACION"></A>
+<P CLASS="TYPE_TITLE">
+insert_ubicacion
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure insert_ubicacion(pid_ave NUMBER, pid_canton NUMBER)
+
+</PRE>
+<HR>
+<A NAME="DELETE_UBICACION"></A>
+<P CLASS="TYPE_TITLE">
+delete_ubicacion
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure delete_ubicacion(pid_ave NUMBER)
+
+</PRE>
+<HR>
+<A NAME="UBICACION_CANTON"></A>
+<P CLASS="TYPE_TITLE">
+ubicacion_canton
+</P>
+<PRE CLASS="DECL_TEXT">
+Function ubicacion_canton(pid_ave NUMBER) RETURN ubicacion_canton_record
+
+</PRE>
+<HR>
+<A NAME="TOTAL_UBICACION"></A>
+<P CLASS="TYPE_TITLE">
+total_ubicacion
+</P>
+<PRE CLASS="DECL_TEXT">
+Function total_ubicacion(pid_canton NUMBER, pid_ave NUMBER) RETURN VARCHAR2
+
+</PRE>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+</BODY>
+</HTML>

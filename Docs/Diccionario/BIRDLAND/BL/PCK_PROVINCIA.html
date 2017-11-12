@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+ <LINK REL="STYLESHEET" TYPE="text/css" HREF="../../plsqldoc.css">
+ <TITLE>Package BL."PCK_PROVINCIA"</TITLE>
+ <META name="object" content="PACKAGE">
+ <META name="name" content="BIRDLAND BL."PCK_PROVINCIA"">
+ <META name="description" content="">
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%"><TR>
+<TD><P ALIGN="LEFT"><STRONG><SMALL>BL@BIRDLAND</SMALL></STRONG></TD>
+<TD><P ALIGN="RIGHT"><STRONG><SMALL><A HREF="../../index.html">index</A></SMALL></STRONG></TD>
+</TR></TABLE>
+<TABLE CLASS="MAIN_TABLE"><TR><TD CLASS="DESC_TEXT">
+<P CLASS="MAIN_TITLE">Package BL."PCK_PROVINCIA"</P>
+
+<BR>
+</TD></TR></TABLE>
+<HR>
+<A NAME="Program units"></A>
+<TABLE CLASS="SUB_TABLE"><TR><TD CLASS="SUB_TITLE">
+Program units
+</TD></TR></TABLE>
+<TABLE CLASS="SUB_TABLE">
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#DELETE_PROVINCIA">delete_provincia</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#UPDATE_PROVINCIA">update_provincia</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#INSERT_PROVINCIA">insert_provincia</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#PROVINCIA_NOMBRE">provincia_nombre</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#PAIS_ID">pais_id</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#PAIS_NOMBRE">pais_nombre</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#PROVINCIA_PAIS">provincia_pais</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="DELETE_PROVINCIA"></A>
+<P CLASS="TYPE_TITLE">
+delete_provincia
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure delete_provincia(pId NUMBER)
+
+</PRE>
+<HR>
+<A NAME="UPDATE_PROVINCIA"></A>
+<P CLASS="TYPE_TITLE">
+update_provincia
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure update_provincia(pId NUMBER, pnombre VARCHAR2, pIdC NUMBER)
+
+</PRE>
+<HR>
+<A NAME="INSERT_PROVINCIA"></A>
+<P CLASS="TYPE_TITLE">
+insert_provincia
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure insert_provincia(pnombre VARCHAR2, pIdC NUMBER)
+
+</PRE>
+<HR>
+<A NAME="PROVINCIA_NOMBRE"></A>
+<P CLASS="TYPE_TITLE">
+provincia_nombre
+</P>
+<PRE CLASS="DECL_TEXT">
+Function provincia_nombre(pId NUMBER) RETURN VARCHAR2
+
+</PRE>
+<HR>
+<A NAME="PAIS_ID"></A>
+<P CLASS="TYPE_TITLE">
+pais_id
+</P>
+<PRE CLASS="DECL_TEXT">
+Function pais_id(pId NUMBER) RETURN VARCHAR2
+
+</PRE>
+<HR>
+<A NAME="PAIS_NOMBRE"></A>
+<P CLASS="TYPE_TITLE">
+pais_nombre
+</P>
+<PRE CLASS="DECL_TEXT">
+Function pais_nombre(pId NUMBER) RETURN VARCHAR2
+
+</PRE>
+<HR>
+<A NAME="PROVINCIA_PAIS"></A>
+<P CLASS="TYPE_TITLE">
+provincia_pais
+</P>
+<PRE CLASS="DECL_TEXT">
+Function provincia_pais RETURN provincia_pais_record
+
+</PRE>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+</BODY>
+</HTML>

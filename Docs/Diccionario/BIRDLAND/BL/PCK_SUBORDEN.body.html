@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+ <LINK REL="STYLESHEET" TYPE="text/css" HREF="../../plsqldoc.css">
+ <TITLE>Package body BL."PCK_SUBORDEN"</TITLE>
+ <META name="object" content="PACKAGE BODY">
+ <META name="name" content="BIRDLAND BL."PCK_SUBORDEN"">
+ <META name="description" content="">
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%"><TR>
+<TD><P ALIGN="LEFT"><STRONG><SMALL>BL@BIRDLAND</SMALL></STRONG></TD>
+<TD><P ALIGN="RIGHT"><STRONG><SMALL><A HREF="../../index.html">index</A></SMALL></STRONG></TD>
+</TR></TABLE>
+<TABLE CLASS="MAIN_TABLE"><TR><TD CLASS="DESC_TEXT">
+<P CLASS="MAIN_TITLE">Package body BL."PCK_SUBORDEN"</P>
+
+<BR>
+</TD></TR></TABLE>
+<HR>
+<A NAME="Program units"></A>
+<TABLE CLASS="SUB_TABLE"><TR><TD CLASS="SUB_TITLE">
+Program units
+</TD></TR></TABLE>
+<TABLE CLASS="SUB_TABLE">
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#DELETE_SUBORDEN">delete_suborden</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#UPDATE_SUBORDEN">update_suborden</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#INSERT_SUBORDEN">insert_suborden</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#SUBORDEN_NOMBRE">suborden_nombre</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#ORDEN_ID">orden_id</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#ORDEN_NOMBRE">orden_nombre</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#SUBORDEN_ORDEN">suborden_orden</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#SUBORDEN_ORDEN_ID">suborden_orden_id</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="DELETE_SUBORDEN"></A>
+<P CLASS="TYPE_TITLE">
+delete_suborden
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure delete_suborden(pId NUMBER)
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="UPDATE_SUBORDEN"></A>
+<P CLASS="TYPE_TITLE">
+update_suborden
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure update_suborden(pId NUMBER, pNombre VARCHAR2, pIdC NUMBER)
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="INSERT_SUBORDEN"></A>
+<P CLASS="TYPE_TITLE">
+insert_suborden
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure insert_suborden(pNombre VARCHAR2, pIdC NUMBER)
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="SUBORDEN_NOMBRE"></A>
+<P CLASS="TYPE_TITLE">
+suborden_nombre
+</P>
+<PRE CLASS="DECL_TEXT">
+Function suborden_nombre(pId NUMBER) return VARCHAR2
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="ORDEN_ID"></A>
+<P CLASS="TYPE_TITLE">
+orden_id
+</P>
+<PRE CLASS="DECL_TEXT">
+Function orden_id(pId NUMBER) return VARCHAR2
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="ORDEN_NOMBRE"></A>
+<P CLASS="TYPE_TITLE">
+orden_nombre
+</P>
+<PRE CLASS="DECL_TEXT">
+Function orden_nombre(pId NUMBER) return VARCHAR2
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="SUBORDEN_ORDEN"></A>
+<P CLASS="TYPE_TITLE">
+suborden_orden
+</P>
+<PRE CLASS="DECL_TEXT">
+Function suborden_orden RETURN suborden_orden_record
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="SUBORDEN_ORDEN_ID"></A>
+<P CLASS="TYPE_TITLE">
+suborden_orden_id
+</P>
+<PRE CLASS="DECL_TEXT">
+Function suborden_orden_id(pid_orden NUMBER) RETURN suborden_record
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+</BODY>
+</HTML>

@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+ <LINK REL="STYLESHEET" TYPE="text/css" HREF="../../plsqldoc.css">
+ <TITLE>Package BL."PCK_FAMILIA"</TITLE>
+ <META name="object" content="PACKAGE">
+ <META name="name" content="BIRDLAND BL."PCK_FAMILIA"">
+ <META name="description" content="">
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%"><TR>
+<TD><P ALIGN="LEFT"><STRONG><SMALL>BL@BIRDLAND</SMALL></STRONG></TD>
+<TD><P ALIGN="RIGHT"><STRONG><SMALL><A HREF="../../index.html">index</A></SMALL></STRONG></TD>
+</TR></TABLE>
+<TABLE CLASS="MAIN_TABLE"><TR><TD CLASS="DESC_TEXT">
+<P CLASS="MAIN_TITLE">Package BL."PCK_FAMILIA"</P>
+
+<BR>
+</TD></TR></TABLE>
+<HR>
+<A NAME="Program units"></A>
+<TABLE CLASS="SUB_TABLE"><TR><TD CLASS="SUB_TITLE">
+Program units
+</TD></TR></TABLE>
+<TABLE CLASS="SUB_TABLE">
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#DELETE_FAMILIA">delete_familia</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#UPDATE_FAMILIA">update_familia</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#INSERT_FAMILIA">insert_familia</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#FAMILIA_NOMBRE">familia_nombre</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#SUBORDEN_ID">suborden_id</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#SUBORDEN_NOMBRE">suborden_nombre</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#FAMILIA_SUBORDEN">familia_suborden</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#FAMILIA_SUBORDEN_ID">familia_suborden_id</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="DELETE_FAMILIA"></A>
+<P CLASS="TYPE_TITLE">
+delete_familia
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure delete_familia(pId NUMBER)
+
+</PRE>
+<HR>
+<A NAME="UPDATE_FAMILIA"></A>
+<P CLASS="TYPE_TITLE">
+update_familia
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure update_familia(pId NUMBER, pnombre VARCHAR2, pIdC NUMBER)
+
+</PRE>
+<HR>
+<A NAME="INSERT_FAMILIA"></A>
+<P CLASS="TYPE_TITLE">
+insert_familia
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure insert_familia(pnombre VARCHAR2, pIdC NUMBER)
+
+</PRE>
+<HR>
+<A NAME="FAMILIA_NOMBRE"></A>
+<P CLASS="TYPE_TITLE">
+familia_nombre
+</P>
+<PRE CLASS="DECL_TEXT">
+Function familia_nombre(pId NUMBER) RETURN VARCHAR2
+
+</PRE>
+<HR>
+<A NAME="SUBORDEN_ID"></A>
+<P CLASS="TYPE_TITLE">
+suborden_id
+</P>
+<PRE CLASS="DECL_TEXT">
+Function suborden_id(pId NUMBER) RETURN VARCHAR2
+
+</PRE>
+<HR>
+<A NAME="SUBORDEN_NOMBRE"></A>
+<P CLASS="TYPE_TITLE">
+suborden_nombre
+</P>
+<PRE CLASS="DECL_TEXT">
+Function suborden_nombre(pId NUMBER) RETURN VARCHAR2
+
+</PRE>
+<HR>
+<A NAME="FAMILIA_SUBORDEN"></A>
+<P CLASS="TYPE_TITLE">
+familia_suborden
+</P>
+<PRE CLASS="DECL_TEXT">
+Function familia_suborden RETURN familia_suborden_record
+
+</PRE>
+<HR>
+<A NAME="FAMILIA_SUBORDEN_ID"></A>
+<P CLASS="TYPE_TITLE">
+familia_suborden_id
+</P>
+<PRE CLASS="DECL_TEXT">
+Function familia_suborden_id(pid_suborden NUMBER) RETURN familia_record
+
+</PRE>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+</BODY>
+</HTML>

@@ -1,0 +1,561 @@
+<HTML>
+<HEAD>
+ <TITLE>Triggers.rep</TITLE>
+ <META name="GENERATOR" content="PL/SQL Developer 12.0.5.1828">
+ <META name="SERIAL" content="">
+ <META name="ORACLE" content="Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 ">
+<STYLE type="text/css">
+ table.tabular_
+ {
+  Color: #000000;
+  Border-style: None;
+  Width: 100%;
+ }
+ table.form_
+ {
+  Color: #000000;
+  Border-style: None;
+ }
+ table.title_, td.title_
+ {
+  Background: #F0F0F0;
+  Color: #000000;
+  Border-style: Solid;
+  Border-width: 1px;
+  Border-Color: #C0C0C0;
+  Padding: 1px;
+  Font-size: 12pt;
+  Font-weight: Bold;
+  Font-style: Italic;
+  Text-align: Center;
+  Width: 100%;
+ }
+ table.variables_, td.variables_
+ {
+  Background: #F0F0F0;
+  Color: #000000;
+  Border-style: None;
+  Font-size: 8pt;
+  Font-weight: Bold;
+ }
+ td
+ {
+  Background: #F4F4F4;
+  Color: #000000;
+ }
+ th
+ {
+  Background: #E0E0E0;
+  Color: #000000;
+ }
+ p.pagebreak_
+ {
+  page-break-before: always;
+ }
+</STYLE>
+</HEAD>
+
+<BODY bgColor=#FFFFFF leftmargin=0 topmargin=0>
+<TABLE class="title_">
+ <TR>
+  <TD class="title_">Triggers</TD>
+ </TR>
+</TABLE>
+<TABLE class="variables_">
+ <TR>
+  <TD class="variables_">trigger owner = BL</TD>
+ </TR>
+ <TR>
+  <TD class="variables_">trigger name = %</TD>
+ </TR>
+ <TR>
+  <TD class="variables_">Table owner = BL</TD>
+ </TR>
+ <TR>
+  <TD class="variables_">Table name = %</TD>
+ </TR>
+</TABLE>
+<TABLE class="tabular_">
+ <TR>
+  <TH align="left">Owner</TH>
+  <TH align="left">Trigger Name</TH>
+  <TH align="left">Trigger Type</TH>
+  <TH align="left">Triggering Event</TH>
+  <TH align="left">Table Owner</TH>
+  <TH align="left">Base Object Type</TH>
+  <TH align="left">Table Name</TH>
+  <TH align="left">Column Name</TH>
+  <TH align="left">Referencing Names</TH>
+  <TH align="left">When Clause</TH>
+  <TH align="left">Status</TH>
+  <TH align="left">Description</TH>
+  <TH align="left">Action Type</TH>
+  <TH align="left">Trigger Body</TH>
+  <TH align="left">Crossedition</TH>
+  <TH align="left">Before Statement</TH>
+  <TH align="left">Before Row</TH>
+  <TH align="left">After Row</TH>
+  <TH align="left">After Statement</TH>
+  <TH align="left">Instead Of Row</TH>
+  <TH align="left">Fire Once</TH>
+  <TH align="left">Apply Server Only</TH>
+ </TR>
+ <TR>
+  <TD align="left">BL</TD>
+  <TD align="left">BEFOREINSERTORUPDATEAVE</TD>
+  <TD align="left">BEFORE EACH ROW</TD>
+  <TD align="left">INSERT OR UPDATE</TD>
+  <TD align="left">BL</TD>
+  <TD align="left">TABLE</TD>
+  <TD align="left">AVE</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">REFERENCING NEW AS NEW OLD AS OLD</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">ENABLED</TD>
+  <TD align="left">&quot;BL&quot;.&quot;BEFOREINSERTORUPDATEAVE&quot; <BR>BEFORE INSERT OR UPDATE<BR>ON ave<BR>FOR EACH ROW<BR></TD>
+  <TD align="left">PL/SQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+  <TD align="left">BEGIN<BR>&nbsp;&nbsp;&nbsp; :new.FECHA_MODIFICACION := SYSDATE;<BR>&nbsp;&nbsp;&nbsp; :new.USER_MODIFICACION := USER;<BR>END;<BR></TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">YES</TD>
+  <TD align="left">NO</TD>
+ </TR>
+ <TR>
+  <TD align="left">BL</TD>
+  <TD align="left">BEFOREINSERTORUPDATEBITACORA</TD>
+  <TD align="left">BEFORE EACH ROW</TD>
+  <TD align="left">INSERT OR UPDATE</TD>
+  <TD align="left">BL</TD>
+  <TD align="left">TABLE</TD>
+  <TD align="left">BITACORA</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">REFERENCING NEW AS NEW OLD AS OLD</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">ENABLED</TD>
+  <TD align="left">&quot;BL&quot;.&quot;BEFOREINSERTORUPDATEBITACORA&quot; <BR>BEFORE INSERT OR UPDATE<BR>ON bitacora<BR>FOR EACH ROW<BR></TD>
+  <TD align="left">PL/SQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+  <TD align="left">BEGIN<BR>&nbsp;&nbsp;&nbsp; :new.FECHA_MODIFICACION := SYSDATE;<BR>&nbsp;&nbsp;&nbsp; :new.USER_MODIFICACION := USER;<BR>END;<BR></TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">YES</TD>
+  <TD align="left">NO</TD>
+ </TR>
+ <TR>
+  <TD align="left">BL</TD>
+  <TD align="left">BEFOREINSERTORUPDATECANTON</TD>
+  <TD align="left">BEFORE EACH ROW</TD>
+  <TD align="left">INSERT OR UPDATE</TD>
+  <TD align="left">BL</TD>
+  <TD align="left">TABLE</TD>
+  <TD align="left">CANTON</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">REFERENCING NEW AS NEW OLD AS OLD</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">ENABLED</TD>
+  <TD align="left">&quot;BL&quot;.&quot;BEFOREINSERTORUPDATECANTON&quot; <BR>BEFORE INSERT OR UPDATE<BR>ON canton<BR>FOR EACH ROW<BR></TD>
+  <TD align="left">PL/SQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+  <TD align="left">BEGIN<BR>&nbsp;&nbsp;&nbsp; :new.FECHA_MODIFICACION := SYSDATE;<BR>&nbsp;&nbsp;&nbsp; :new.USER_MODIFICACION := USER;<BR>END;<BR></TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">YES</TD>
+  <TD align="left">NO</TD>
+ </TR>
+ <TR>
+  <TD align="left">BL</TD>
+  <TD align="left">BEFOREINSERTORUPDATECLASE</TD>
+  <TD align="left">BEFORE EACH ROW</TD>
+  <TD align="left">INSERT OR UPDATE</TD>
+  <TD align="left">BL</TD>
+  <TD align="left">TABLE</TD>
+  <TD align="left">CLASE</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">REFERENCING NEW AS NEW OLD AS OLD</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">ENABLED</TD>
+  <TD align="left">&quot;BL&quot;.&quot;BEFOREINSERTORUPDATECLASE&quot; <BR>BEFORE INSERT OR UPDATE<BR>ON clase<BR>FOR EACH ROW<BR></TD>
+  <TD align="left">PL/SQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+  <TD align="left">BEGIN<BR>&nbsp;&nbsp;&nbsp; :new.FECHA_MODIFICACION := SYSDATE;<BR>&nbsp;&nbsp;&nbsp; :new.USER_MODIFICACION := USER;<BR>END;<BR></TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">YES</TD>
+  <TD align="left">NO</TD>
+ </TR>
+ <TR>
+  <TD align="left">BL</TD>
+  <TD align="left">BEFOREINSERTORUPDATECOLOR</TD>
+  <TD align="left">BEFORE EACH ROW</TD>
+  <TD align="left">INSERT OR UPDATE</TD>
+  <TD align="left">BL</TD>
+  <TD align="left">TABLE</TD>
+  <TD align="left">COLOR</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">REFERENCING NEW AS NEW OLD AS OLD</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">ENABLED</TD>
+  <TD align="left">&quot;BL&quot;.&quot;BEFOREINSERTORUPDATECOLOR&quot; <BR>BEFORE INSERT OR UPDATE<BR>ON color<BR>FOR EACH ROW<BR></TD>
+  <TD align="left">PL/SQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+  <TD align="left">BEGIN<BR>&nbsp;&nbsp;&nbsp; :new.FECHA_MODIFICACION := SYSDATE;<BR>&nbsp;&nbsp;&nbsp; :new.USER_MODIFICACION := USER;<BR>END;<BR></TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">YES</TD>
+  <TD align="left">NO</TD>
+ </TR>
+ <TR>
+  <TD align="left">BL</TD>
+  <TD align="left">BEFOREINSERTORUPDATECONTINENTE</TD>
+  <TD align="left">BEFORE EACH ROW</TD>
+  <TD align="left">INSERT OR UPDATE</TD>
+  <TD align="left">BL</TD>
+  <TD align="left">TABLE</TD>
+  <TD align="left">CONTINENTE</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">REFERENCING NEW AS NEW OLD AS OLD</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">ENABLED</TD>
+  <TD align="left">&quot;BL&quot;.&quot;BEFOREINSERTORUPDATECONTINENTE&quot; <BR>BEFORE INSERT OR UPDATE<BR>ON continente<BR>FOR EACH ROW<BR></TD>
+  <TD align="left">PL/SQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+  <TD align="left">BEGIN<BR>&nbsp;&nbsp;&nbsp; :new.FECHA_MODIFICACION := SYSDATE;<BR>&nbsp;&nbsp;&nbsp; :new.USER_MODIFICACION := USER;<BR>END;<BR></TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">YES</TD>
+  <TD align="left">NO</TD>
+ </TR>
+ <TR>
+  <TD align="left">BL</TD>
+  <TD align="left">BEFOREINSERTORUPDATEESPECIE</TD>
+  <TD align="left">BEFORE EACH ROW</TD>
+  <TD align="left">INSERT OR UPDATE</TD>
+  <TD align="left">BL</TD>
+  <TD align="left">TABLE</TD>
+  <TD align="left">ESPECIE</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">REFERENCING NEW AS NEW OLD AS OLD</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">ENABLED</TD>
+  <TD align="left">&quot;BL&quot;.&quot;BEFOREINSERTORUPDATEESPECIE&quot; <BR>BEFORE INSERT OR UPDATE<BR>ON especie<BR>FOR EACH ROW<BR></TD>
+  <TD align="left">PL/SQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+  <TD align="left">BEGIN<BR>&nbsp;&nbsp;&nbsp; :new.FECHA_MODIFICACION := SYSDATE;<BR>&nbsp;&nbsp;&nbsp; :new.USER_MODIFICACION := USER;<BR>END;<BR></TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">YES</TD>
+  <TD align="left">NO</TD>
+ </TR>
+ <TR>
+  <TD align="left">BL</TD>
+  <TD align="left">BEFOREINSERTORUPDATEFAMILIA</TD>
+  <TD align="left">BEFORE EACH ROW</TD>
+  <TD align="left">INSERT OR UPDATE</TD>
+  <TD align="left">BL</TD>
+  <TD align="left">TABLE</TD>
+  <TD align="left">FAMILIA</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">REFERENCING NEW AS NEW OLD AS OLD</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">ENABLED</TD>
+  <TD align="left">&quot;BL&quot;.&quot;BEFOREINSERTORUPDATEFAMILIA&quot; <BR>BEFORE INSERT OR UPDATE<BR>ON familia<BR>FOR EACH ROW<BR></TD>
+  <TD align="left">PL/SQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+  <TD align="left">BEGIN<BR>&nbsp;&nbsp;&nbsp; :new.FECHA_MODIFICACION := SYSDATE;<BR>&nbsp;&nbsp;&nbsp; :new.USER_MODIFICACION := USER;<BR>END;<BR></TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">YES</TD>
+  <TD align="left">NO</TD>
+ </TR>
+ <TR>
+  <TD align="left">BL</TD>
+  <TD align="left">BEFOREINSERTORUPDATEGENERO</TD>
+  <TD align="left">BEFORE EACH ROW</TD>
+  <TD align="left">INSERT OR UPDATE</TD>
+  <TD align="left">BL</TD>
+  <TD align="left">TABLE</TD>
+  <TD align="left">GENERO</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">REFERENCING NEW AS NEW OLD AS OLD</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">ENABLED</TD>
+  <TD align="left">&quot;BL&quot;.&quot;BEFOREINSERTORUPDATEGENERO&quot; <BR>BEFORE INSERT OR UPDATE<BR>ON genero<BR>FOR EACH ROW<BR></TD>
+  <TD align="left">PL/SQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+  <TD align="left">BEGIN<BR>&nbsp;&nbsp;&nbsp; :new.FECHA_MODIFICACION := SYSDATE;<BR>&nbsp;&nbsp;&nbsp; :new.USER_MODIFICACION := USER;<BR>END;<BR></TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">YES</TD>
+  <TD align="left">NO</TD>
+ </TR>
+ <TR>
+  <TD align="left">BL</TD>
+  <TD align="left">BEFOREINSERTORUPDATEORDEN</TD>
+  <TD align="left">BEFORE EACH ROW</TD>
+  <TD align="left">INSERT OR UPDATE</TD>
+  <TD align="left">BL</TD>
+  <TD align="left">TABLE</TD>
+  <TD align="left">ORDEN</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">REFERENCING NEW AS NEW OLD AS OLD</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">ENABLED</TD>
+  <TD align="left">&quot;BL&quot;.&quot;BEFOREINSERTORUPDATEORDEN&quot; <BR>BEFORE INSERT OR UPDATE<BR>ON orden<BR>FOR EACH ROW<BR></TD>
+  <TD align="left">PL/SQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+  <TD align="left">BEGIN<BR>&nbsp;&nbsp;&nbsp; :new.FECHA_MODIFICACION := SYSDATE;<BR>&nbsp;&nbsp;&nbsp; :new.USER_MODIFICACION := USER;<BR>END;<BR></TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">YES</TD>
+  <TD align="left">NO</TD>
+ </TR>
+ <TR>
+  <TD align="left">BL</TD>
+  <TD align="left">BEFOREINSERTORUPDATEPAIS</TD>
+  <TD align="left">BEFORE EACH ROW</TD>
+  <TD align="left">INSERT OR UPDATE</TD>
+  <TD align="left">BL</TD>
+  <TD align="left">TABLE</TD>
+  <TD align="left">PAIS</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">REFERENCING NEW AS NEW OLD AS OLD</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">ENABLED</TD>
+  <TD align="left">&quot;BL&quot;.&quot;BEFOREINSERTORUPDATEPAIS&quot; <BR>BEFORE INSERT OR UPDATE<BR>ON pais<BR>FOR EACH ROW<BR></TD>
+  <TD align="left">PL/SQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+  <TD align="left">BEGIN<BR>&nbsp;&nbsp;&nbsp; :new.FECHA_MODIFICACION := SYSDATE;<BR>&nbsp;&nbsp;&nbsp; :new.USER_MODIFICACION := USER;<BR>END;<BR></TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">YES</TD>
+  <TD align="left">NO</TD>
+ </TR>
+ <TR>
+  <TD align="left">BL</TD>
+  <TD align="left">BEFOREINSERTORUPDATEPARAMETRO</TD>
+  <TD align="left">BEFORE EACH ROW</TD>
+  <TD align="left">INSERT OR UPDATE</TD>
+  <TD align="left">BL</TD>
+  <TD align="left">TABLE</TD>
+  <TD align="left">PARAMETRO</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">REFERENCING NEW AS NEW OLD AS OLD</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">ENABLED</TD>
+  <TD align="left">&quot;BL&quot;.&quot;BEFOREINSERTORUPDATEPARAMETRO&quot; <BR>BEFORE INSERT OR UPDATE<BR>ON parametro<BR>FOR EACH ROW<BR></TD>
+  <TD align="left">PL/SQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+  <TD align="left">BEGIN<BR>&nbsp;&nbsp;&nbsp; :new.FECHA_MODIFICACION := SYSDATE;<BR>&nbsp;&nbsp;&nbsp; :new.USER_MODIFICACION := USER;<BR>END;<BR></TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">YES</TD>
+  <TD align="left">NO</TD>
+ </TR>
+ <TR>
+  <TD align="left">BL</TD>
+  <TD align="left">BEFOREINSERTORUPDATEPERSONA</TD>
+  <TD align="left">BEFORE EACH ROW</TD>
+  <TD align="left">INSERT OR UPDATE</TD>
+  <TD align="left">BL</TD>
+  <TD align="left">TABLE</TD>
+  <TD align="left">PERSONA</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">REFERENCING NEW AS NEW OLD AS OLD</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">ENABLED</TD>
+  <TD align="left">&quot;BL&quot;.&quot;BEFOREINSERTORUPDATEPERSONA&quot; <BR>BEFORE INSERT OR UPDATE<BR>ON persona<BR>FOR EACH ROW<BR></TD>
+  <TD align="left">PL/SQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+  <TD align="left">BEGIN<BR>&nbsp;&nbsp;&nbsp; :new.FECHA_MODIFICACION := SYSDATE;<BR>&nbsp;&nbsp;&nbsp; :new.USER_MODIFICACION := USER;<BR>END;<BR></TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">YES</TD>
+  <TD align="left">NO</TD>
+ </TR>
+ <TR>
+  <TD align="left">BL</TD>
+  <TD align="left">BEFOREINSERTORUPDATEPROVINCIA</TD>
+  <TD align="left">BEFORE EACH ROW</TD>
+  <TD align="left">INSERT OR UPDATE</TD>
+  <TD align="left">BL</TD>
+  <TD align="left">TABLE</TD>
+  <TD align="left">PROVINCIA</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">REFERENCING NEW AS NEW OLD AS OLD</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">ENABLED</TD>
+  <TD align="left">&quot;BL&quot;.&quot;BEFOREINSERTORUPDATEPROVINCIA&quot; <BR>BEFORE INSERT OR UPDATE<BR>ON provincia<BR>FOR EACH ROW<BR></TD>
+  <TD align="left">PL/SQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+  <TD align="left">BEGIN<BR>&nbsp;&nbsp;&nbsp; :new.FECHA_MODIFICACION := SYSDATE;<BR>&nbsp;&nbsp;&nbsp; :new.USER_MODIFICACION := USER;<BR>END;<BR></TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">YES</TD>
+  <TD align="left">NO</TD>
+ </TR>
+ <TR>
+  <TD align="left">BL</TD>
+  <TD align="left">BEFOREINSERTORUPDATEPUNTAJE</TD>
+  <TD align="left">BEFORE EACH ROW</TD>
+  <TD align="left">INSERT OR UPDATE</TD>
+  <TD align="left">BL</TD>
+  <TD align="left">TABLE</TD>
+  <TD align="left">PUNTAJE</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">REFERENCING NEW AS NEW OLD AS OLD</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">ENABLED</TD>
+  <TD align="left">&quot;BL&quot;.&quot;BEFOREINSERTORUPDATEPUNTAJE&quot; <BR>BEFORE INSERT OR UPDATE<BR>ON puntaje<BR>FOR EACH ROW<BR></TD>
+  <TD align="left">PL/SQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+  <TD align="left">BEGIN<BR>&nbsp;&nbsp;&nbsp; :new.FECHA_MODIFICACION := SYSDATE;<BR>&nbsp;&nbsp;&nbsp; :new.USER_MODIFICACION := USER;<BR>END;<BR></TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">YES</TD>
+  <TD align="left">NO</TD>
+ </TR>
+ <TR>
+  <TD align="left">BL</TD>
+  <TD align="left">BEFOREINSERTORUPDATESUBORDEN</TD>
+  <TD align="left">BEFORE EACH ROW</TD>
+  <TD align="left">INSERT OR UPDATE</TD>
+  <TD align="left">BL</TD>
+  <TD align="left">TABLE</TD>
+  <TD align="left">SUBORDEN</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">REFERENCING NEW AS NEW OLD AS OLD</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">ENABLED</TD>
+  <TD align="left">&quot;BL&quot;.&quot;BEFOREINSERTORUPDATESUBORDEN&quot; <BR>BEFORE INSERT OR UPDATE<BR>ON suborden<BR>FOR EACH ROW<BR></TD>
+  <TD align="left">PL/SQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+  <TD align="left">BEGIN<BR>&nbsp;&nbsp;&nbsp; :new.FECHA_MODIFICACION := SYSDATE;<BR>&nbsp;&nbsp;&nbsp; :new.USER_MODIFICACION := USER;<BR>END;<BR></TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">YES</TD>
+  <TD align="left">NO</TD>
+ </TR>
+ <TR>
+  <TD align="left">BL</TD>
+  <TD align="left">BEFOREINSERTORUPDATETIPO</TD>
+  <TD align="left">BEFORE EACH ROW</TD>
+  <TD align="left">INSERT OR UPDATE</TD>
+  <TD align="left">BL</TD>
+  <TD align="left">TABLE</TD>
+  <TD align="left">TIPO</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">REFERENCING NEW AS NEW OLD AS OLD</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">ENABLED</TD>
+  <TD align="left">&quot;BL&quot;.&quot;BEFOREINSERTORUPDATETIPO&quot; <BR>BEFORE INSERT OR UPDATE<BR>ON tipo<BR>FOR EACH ROW<BR></TD>
+  <TD align="left">PL/SQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+  <TD align="left">BEGIN<BR>&nbsp;&nbsp;&nbsp; :new.FECHA_MODIFICACION := SYSDATE;<BR>&nbsp;&nbsp;&nbsp; :new.USER_MODIFICACION := USER;<BR>END;<BR></TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">YES</TD>
+  <TD align="left">NO</TD>
+ </TR>
+ <TR>
+  <TD align="left">BL</TD>
+  <TD align="left">BEFOREINSERTORUPDATEUBICACION</TD>
+  <TD align="left">BEFORE EACH ROW</TD>
+  <TD align="left">INSERT OR UPDATE</TD>
+  <TD align="left">BL</TD>
+  <TD align="left">TABLE</TD>
+  <TD align="left">UBICACION</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">REFERENCING NEW AS NEW OLD AS OLD</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">ENABLED</TD>
+  <TD align="left">&quot;BL&quot;.&quot;BEFOREINSERTORUPDATEUBICACION&quot; <BR>BEFORE INSERT OR UPDATE<BR>ON ubicacion<BR>FOR EACH ROW<BR></TD>
+  <TD align="left">PL/SQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+  <TD align="left">BEGIN<BR>&nbsp;&nbsp;&nbsp; :new.FECHA_MODIFICACION := SYSDATE;<BR>&nbsp;&nbsp;&nbsp; :new.USER_MODIFICACION := USER;<BR>END;<BR></TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">YES</TD>
+  <TD align="left">NO</TD>
+ </TR>
+ <TR>
+  <TD align="left">BL</TD>
+  <TD align="left">BEFOREINSERTORUPDATEUSUARIO</TD>
+  <TD align="left">BEFORE EACH ROW</TD>
+  <TD align="left">INSERT OR UPDATE</TD>
+  <TD align="left">BL</TD>
+  <TD align="left">TABLE</TD>
+  <TD align="left">USUARIO</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">REFERENCING NEW AS NEW OLD AS OLD</TD>
+  <TD align="left">&nbsp;</TD>
+  <TD align="left">ENABLED</TD>
+  <TD align="left">&quot;BL&quot;.&quot;BEFOREINSERTORUPDATEUSUARIO&quot; <BR>BEFORE INSERT OR UPDATE<BR>ON usuario<BR>FOR EACH ROW<BR></TD>
+  <TD align="left">PL/SQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+  <TD align="left">BEGIN<BR>&nbsp;&nbsp;&nbsp; :new.FECHA_MODIFICACION := SYSDATE;<BR>&nbsp;&nbsp;&nbsp; :new.USER_MODIFICACION := USER;<BR>END;<BR></TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">NO</TD>
+  <TD align="left">YES</TD>
+  <TD align="left">NO</TD>
+ </TR>
+</TABLE>
+</BODY>
+</HTML>

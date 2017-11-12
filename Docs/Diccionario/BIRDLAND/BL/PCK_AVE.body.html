@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+ <LINK REL="STYLESHEET" TYPE="text/css" HREF="../../plsqldoc.css">
+ <TITLE>Package body BL."PCK_AVE"</TITLE>
+ <META name="object" content="PACKAGE BODY">
+ <META name="name" content="BIRDLAND BL."PCK_AVE"">
+ <META name="description" content="">
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%"><TR>
+<TD><P ALIGN="LEFT"><STRONG><SMALL>BL@BIRDLAND</SMALL></STRONG></TD>
+<TD><P ALIGN="RIGHT"><STRONG><SMALL><A HREF="../../index.html">index</A></SMALL></STRONG></TD>
+</TR></TABLE>
+<TABLE CLASS="MAIN_TABLE"><TR><TD CLASS="DESC_TEXT">
+<P CLASS="MAIN_TITLE">Package body BL."PCK_AVE"</P>
+
+<BR>
+</TD></TR></TABLE>
+<HR>
+<A NAME="Program units"></A>
+<TABLE CLASS="SUB_TABLE"><TR><TD CLASS="SUB_TITLE">
+Program units
+</TD></TR></TABLE>
+<TABLE CLASS="SUB_TABLE">
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#DELETE_AVE">delete_ave</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#UPDATE_AVE">update_ave</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#UPDATE_AVE_ESPECIE">update_ave_especie</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#INSERT_AVE">insert_ave</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#SELECT_AVE">select_ave</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#TOTAL_AVE">total_ave</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#AVE_ESPECIE_GENERO">ave_especie_genero</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#AVE_GENERAL">ave_general</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#AVE_TIPO">ave_tipo</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#AVE_ID">ave_id</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="DELETE_AVE"></A>
+<P CLASS="TYPE_TITLE">
+delete_ave
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure delete_ave(pId NUMBER)
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="UPDATE_AVE"></A>
+<P CLASS="TYPE_TITLE">
+update_ave
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure update_ave(pid_ave    NUMBER,
+                     pid_color  NUMBER,
+                     pid_estado NUMBER,
+                     pnombre    varchar2,
+                     ptamano    varchar2,
+                     pimagen    varchar2)
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="UPDATE_AVE_ESPECIE"></A>
+<P CLASS="TYPE_TITLE">
+update_ave_especie
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure update_ave_especie(pid_ave NUMBER, pid_especie NUMBER)
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="INSERT_AVE"></A>
+<P CLASS="TYPE_TITLE">
+insert_ave
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure insert_ave(pid_especie NUMBER,
+                     pid_color   NUMBER,
+                     pid_estado  NUMBER,
+                     pnombre     varchar2,
+                     ptamano     varchar2,
+                     pimagen     varchar2)
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="SELECT_AVE"></A>
+<P CLASS="TYPE_TITLE">
+select_ave
+</P>
+<PRE CLASS="DECL_TEXT">
+Function select_ave(pid_ave NUMBER) RETURN ave_record
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="TOTAL_AVE"></A>
+<P CLASS="TYPE_TITLE">
+total_ave
+</P>
+<PRE CLASS="DECL_TEXT">
+Function <A HREF="TOTAL_AVE.html">total_ave</A> RETURN VARCHAR2
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="AVE_ESPECIE_GENERO"></A>
+<P CLASS="TYPE_TITLE">
+ave_especie_genero
+</P>
+<PRE CLASS="DECL_TEXT">
+Function ave_especie_genero RETURN ave_especie_genero_record
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="AVE_GENERAL"></A>
+<P CLASS="TYPE_TITLE">
+ave_general
+</P>
+<PRE CLASS="DECL_TEXT">
+Function ave_general(pid_ave NUMBER) RETURN ave_general_record
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="AVE_TIPO"></A>
+<P CLASS="TYPE_TITLE">
+ave_tipo
+</P>
+<PRE CLASS="DECL_TEXT">
+Function ave_tipo(pid_tipo NUMBER) RETURN ave_tipo_record
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="AVE_ID"></A>
+<P CLASS="TYPE_TITLE">
+ave_id
+</P>
+<PRE CLASS="DECL_TEXT">
+Function ave_id RETURN VARCHAR2
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+</BODY>
+</HTML>

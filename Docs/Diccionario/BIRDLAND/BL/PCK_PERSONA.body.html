@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+ <LINK REL="STYLESHEET" TYPE="text/css" HREF="../../plsqldoc.css">
+ <TITLE>Package body BL."PCK_PERSONA"</TITLE>
+ <META name="object" content="PACKAGE BODY">
+ <META name="name" content="BIRDLAND BL."PCK_PERSONA"">
+ <META name="description" content="">
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%"><TR>
+<TD><P ALIGN="LEFT"><STRONG><SMALL>BL@BIRDLAND</SMALL></STRONG></TD>
+<TD><P ALIGN="RIGHT"><STRONG><SMALL><A HREF="../../index.html">index</A></SMALL></STRONG></TD>
+</TR></TABLE>
+<TABLE CLASS="MAIN_TABLE"><TR><TD CLASS="DESC_TEXT">
+<P CLASS="MAIN_TITLE">Package body BL."PCK_PERSONA"</P>
+
+<BR>
+</TD></TR></TABLE>
+<HR>
+<A NAME="Program units"></A>
+<TABLE CLASS="SUB_TABLE"><TR><TD CLASS="SUB_TITLE">
+Program units
+</TD></TR></TABLE>
+<TABLE CLASS="SUB_TABLE">
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#DELETE_P">delete_p</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#UPDATE_P">update_p</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#INSERT_P">insert_p</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#TIPO_PERSONA">tipo_persona</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#ID_PERSONA">id_persona</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#OBTENER_NOMBRE">obtener_nombre</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#TOTAL_PERSONA">total_persona</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#PERSONA_USUARIO">persona_usuario</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#PERSONA_BITACORA">persona_bitacora</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="DELETE_P"></A>
+<P CLASS="TYPE_TITLE">
+delete_p
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure delete_p(pId NUMBER)
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="UPDATE_P"></A>
+<P CLASS="TYPE_TITLE">
+update_p
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure update_p(pid_persona       NUMBER,
+                   pnombre           VARCHAR2,
+                   papellido         VARCHAR2,
+                   pemail            VARCHAR2,
+                   pprofesion        VARCHAR2,
+                   ptipo             NUMBER,
+                   pfecha_nacimiento date,
+                   pfoto             VARCHAR2,
+                   puser             VARCHAR2,
+                   ppass             VARCHAR2,
+                   ppass_s           VARCHAR2)
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="INSERT_P"></A>
+<P CLASS="TYPE_TITLE">
+insert_p
+</P>
+<PRE CLASS="DECL_TEXT">
+Procedure insert_p(pnombre           VARCHAR2,
+                   papellido         VARCHAR2,
+                   pemail            VARCHAR2,
+                   pprofesion        VARCHAR2,
+                   ptipo             NUMBER,
+                   pfecha_nacimiento date,
+                   puser             VARCHAR2,
+                   ppass             VARCHAR2,
+                   ppass_s           VARCHAR2)
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="TIPO_PERSONA"></A>
+<P CLASS="TYPE_TITLE">
+tipo_persona
+</P>
+<PRE CLASS="DECL_TEXT">
+Function tipo_persona(pusuario VARCHAR2, pcontrasena VARCHAR2)
+  return NUMBER
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="ID_PERSONA"></A>
+<P CLASS="TYPE_TITLE">
+id_persona
+</P>
+<PRE CLASS="DECL_TEXT">
+Function id_persona(pusuario VARCHAR2, pcontrasena VARCHAR2) return NUMBER
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="OBTENER_NOMBRE"></A>
+<P CLASS="TYPE_TITLE">
+obtener_nombre
+</P>
+<PRE CLASS="DECL_TEXT">
+Function obtener_nombre(pId NUMBER) return VARCHAR2
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="TOTAL_PERSONA"></A>
+<P CLASS="TYPE_TITLE">
+total_persona
+</P>
+<PRE CLASS="DECL_TEXT">
+Function total_persona RETURN VARCHAR2
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="PERSONA_USUARIO"></A>
+<P CLASS="TYPE_TITLE">
+persona_usuario
+</P>
+<PRE CLASS="DECL_TEXT">
+Function persona_usuario(pid_persona NUMBER) RETURN persona_usuario_record
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="PERSONA_BITACORA"></A>
+<P CLASS="TYPE_TITLE">
+persona_bitacora
+</P>
+<PRE CLASS="DECL_TEXT">
+Function persona_bitacora(pid_persona NUMBER) RETURN bitacora_record
+
+</PRE>
+<P CLASS="DESC_TEXT">
+-- ********************************************************* --<br>
+
+<BR>
+</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+</BODY>
+</HTML>
