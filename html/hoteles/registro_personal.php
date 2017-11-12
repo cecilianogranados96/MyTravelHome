@@ -26,7 +26,7 @@ if (isset($_GET['rhotel'])){
                         <div class="input-field s12">
                             <input type="text" class="validate" name="user">
                             
-                        </div>
+                    </div>
                     </div>
                        <div>
                            <label>Contraseña</label>
