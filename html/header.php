@@ -41,9 +41,12 @@
                 <div class="row">
                     <div class="top-bar">
                         <ul>
+                            <li><a href="Docs/" target="_blank">Docs</a></li>
+                            <li><a href="Manual/" target="_blank">Manual</a></li>
                             <li><a href="?pag=registro_hotel">Registro Hotel</a></li>
                             <li><a href="?pag=registro_agencia">Registro Agencias</a></li>
                             <li><a href="?pag=ingresar">Ingreso</a></li>
+                            
                         </ul>
                     </div>
                 </div>
