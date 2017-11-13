@@ -41,7 +41,7 @@ if (isset($_GET['edit'])){
     <div class="db-title">
         <center>
             <h3><img src="images/icon/dbc6.png" />Personal activo</h3>
-            <p>Se insertan las categorias de un hotel</p>
+            <p>Se insertan las categorías de un hotel</p>
         </center>
     </div>
 
@@ -81,14 +81,14 @@ if (isset($_GET['edit'])){
                 </div>
             </div>
             <div>
-                <label>Cedula</label>
+                <label>Cédula</label>
                 <div class="input-field s12">
                     <input type="number" class="validate" value="<?php echo $datos_p['cedula']; ?>" name="cedula">
 
                 </div>
             </div>
             <div>
-                <label>Genero</label>
+                <label>Género</label>
                 <div class="input-field s12">
                     <select name="genero" class="validate">
                             <?php
@@ -160,7 +160,7 @@ if (isset($_GET['edit'])){
                     <center>Apellido</center>
                 </th>
                 <th>
-                    <center>Cedula</center>
+                    <center>Cédula</center>
                 </th>
                 <th>
                     <center>Editar</center>

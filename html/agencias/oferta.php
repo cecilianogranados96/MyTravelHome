@@ -1,4 +1,19 @@
+<br><br><br><br><br><br><br>
 <?php 
+##################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Página de ofertas
+#
+# Desarrollo:
+# 
+# - SILVIA CALDERÓN NAVARRO
+#
+#
+###################################################################
+
 
     $query = "SELECT usuario, contrasena FROM `usuario` WHERE id_usuario = '".$_SESSION['usuario']."' ";
     $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
@@ -66,7 +81,11 @@
                                 $query = 'SELECT * FROM habitacion';
                                 $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
                                 while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
-                                    echo "<option value='".$line['id_habitacion']."'>".$line['nombre']."</option>";
+                                    if ($line['id_habitacion'] == $datos['habitacion']){
+                                        echo "<option value='".$line['id_habitacion']."' select>".$line['nombre']."</option>";
+                                    }else{
+                                        echo "<option value='".$line['id_habitacion']."'>".$line['nombre']."</option>";
+                                    }
                                 }
                             ?>                                                                      
                         </select>
@@ -142,3 +161,5 @@
     </table>
     <?php } ?>
 </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

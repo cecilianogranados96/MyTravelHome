@@ -1,5 +1,22 @@
 
 <?php 
+##################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Reporte de hoteles por servicio
+#
+# Desarrollo:
+# 
+# - JOSE ANDRÉS CECILIANNO GRANADOS
+# 
+# Mejoras:
+#
+# - Silvia Calderón Navarro 
+#
+###################################################################
+
 $where = "";
 if (isset($_GET['buscar'])){    
         $where = "where ";

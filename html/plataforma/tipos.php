@@ -1,4 +1,17 @@
 <?php 
+##################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Catálogo de tipos de hotel
+#
+# Desarrollo:
+# 
+# - SILVIA CALDERÓN NAVARRO
+#
+#
+###################################################################
 
 if (isset($_GET['act'])){
         $query = " UPDATE `tipo_hotel` SET `nombre`= '".$_POST['nombre_p']."', `descripcion`= '".$_POST['descripcion_p']."' WHERE id_tipo_hotel = '".$_GET['act']."' ";

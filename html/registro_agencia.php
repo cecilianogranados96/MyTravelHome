@@ -1,8 +1,26 @@
 <br><br><br><br><br><br><br><br>
+<?php
+##################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Registro de una nueva agencia
+#
+# Desarrollo:
+# 
+# - JOSE ANDRÉS CECILIANO GRANADOS
+#
+# Mejoras:
+# 
+# - SILVIA CALDERÓN NAVARRO
+#
+###################################################################
+?>
 <div class="db-cent-table db-com-table">
     <div class="db-title">
         <center>
-            <h3><img src="images/icon/dbc6.png" />Registro de agencia</h3>
+            <h3><img src="images/icon/dbc6.png" />Registro de agencias</h3>
             <p>My Travel Home</p>
         </center>
     </div>
@@ -30,7 +48,7 @@
                 <div>
                     <br>
                     <center>
-                        <label>Fotografia</label>
+                        <label>Fotografía</label>
                     </center>
                     <div class="input-field s12">
                         <input type="file" class="validate" name="foto" required>

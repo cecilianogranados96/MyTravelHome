@@ -51,7 +51,7 @@ $loc = explode(",", $hotel['localizacion']);
                 </div>
 
 
-                <label>Caracteristicas</label>
+                <label>Características</label>
                 <div class="input-field s12">
                     <input type="text" value="<?php echo $hotel['caracteristica']; ?>" class="validate" name="caract">
                
@@ -91,7 +91,7 @@ $loc = explode(",", $hotel['localizacion']);
                 </select>
                 </div>
 
-                <label>Categoria</label>
+                <label>Categoría</label>
                 <div class="input-field s12">
                     <select name="categoria" class="validate">
                       <?php
@@ -108,14 +108,15 @@ $loc = explode(",", $hotel['localizacion']);
                 </select>
                 </div>
 
-                <label>Localizacion</label>
+                <label>Localización</label>
                 <div id="map" style="height: 80%;"></div>
                 <input type="text" id="LAT" name="localicacion" hidden/>
                 <div>
                     <div class="input-field s4">
                         <center>
-                            <input type="submit" value="Actualizar" class="waves-effect waves-light log-in-btn"> </div>
+                            <input type="submit" value="Actualizar" class="waves-effect waves-light log-in-btn"></center> </div>
                 </div>
+            </div>
         </form>
 
 

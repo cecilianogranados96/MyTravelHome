@@ -18,7 +18,7 @@ if (isset($_GET['rhotel'])){
     <div class="db-title">
         <center>
             <h3><img src="images/icon/dbc6.png" />Registro de Habitaciones</h3>
-            <p>Datos de acceso</p>
+            <p>Datos de la habitación</p>
         </center>
     </div>
 
@@ -56,7 +56,7 @@ if (isset($_GET['rhotel'])){
                         </div>
                     </div>   
                     <div>
-                         <label>Numero de habitacion</label>
+                         <label>Número de habitación</label>
                         <div class="input-field s12">
                             <input type="number" class="validate" name="numero">
                         </div>

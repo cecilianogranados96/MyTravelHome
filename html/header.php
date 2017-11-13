@@ -1,3 +1,22 @@
+<?php 
+##################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Header de la aplicación
+#
+# Desarrollo:
+# 
+# - JOSE ANDRÉS CECILIANO GRANADOS
+#
+# Mejoras:
+# 
+# - SILVIA CALDERÓN NAVARRO
+#
+###################################################################
+?> 
+
 <html lang="es">
 
 <head>
@@ -27,7 +46,7 @@
                 <div class="mm-menu">
                     <div class="mm-close"><span><i class="fa fa-times hide-menu" aria-hidden="true"></i></span></div>
                     <ul>
-                        <li><a href="index.php">Home - Default</a></li>
+                        <li><a href="index.php">My TravelHome</a></li>
                     </ul>
                 </div>
             </div>
@@ -41,9 +60,9 @@
                 <div class="row">
                     <div class="top-bar">
                         <ul>
-                            <li><a href="Docs/" target="_blank">Docs</a></li>
-                            <li><a href="Manual/" target="_blank">Manual</a></li>
-                            <li><a href="?pag=registro_hotel">Registro Hotel</a></li>
+                            <li><a href="Docs/" target="_blank">Documentación</a></li>
+                            <li><a href="Manual/" target="_blank">Manual de usuario</a></li>
+                            <li><a href="?pag=registro_hotel">Registro Hoteles</a></li>
                             <li><a href="?pag=registro_agencia">Registro Agencias</a></li>
                             <li><a href="?pag=ingresar">Ingreso</a></li>
                             

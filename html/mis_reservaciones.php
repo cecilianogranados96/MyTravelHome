@@ -1,18 +1,29 @@
 <!--TOP SECTION-->
-		<br><br><br><br>
+<br><br><br><br>
+<?php
+##################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Reservaciones realizadas por cliente
+#
+# Desarrollo:
+# 
+# - JOSE ANDRÉS CECILIANO GRANADOS
+#
+#
+###################################################################
+?>
 
 <?php
-
 if(isset($_GET['borrar'])){
     $query = "UPDATE `habitacion` SET `estado`=1 WHERE `id_habitacion`= '".$_GET['habitacion']."'";
         $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
     $query = "DELETE FROM `reservacion` WHERE `id_reservacion` = ".$_GET['borrar']."";
         $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
     
-      echo '<script>alert("Eliminado con exito!"); </script>';
-    
-    
-    
+      echo '<script>alert("¡Eliminado con éxito!"); </script>';
 }
 
 
@@ -103,10 +114,7 @@ if(isset($_GET['borrar'])){
                             
                      <h2><a href="?pag=mis_reservaciones&borrar='.$line['id_reservacion'].'&habitacion='.$line['id_habitacion'].'" class="btn btn-danger">Eliminar</a></h2>
 							
-					</div>
-                ';
-                                 
-                                    
+					</div>';                                   
                                    $facilidades = "";
                                   
                                 }

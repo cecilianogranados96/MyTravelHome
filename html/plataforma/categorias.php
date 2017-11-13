@@ -1,4 +1,18 @@
 <?php 
+##################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Catálogo de categorías
+#
+# Desarrollo:
+# 
+# - SILVIA CALDERÓN NAVARRO
+#
+#
+###################################################################
+
 
 if (isset($_GET['act'])){
         $query = " UPDATE `categoria_hotel` SET `nombre`= '".$_POST['nombre_p']."' WHERE id_categoria_hotel = '".$_GET['act']."' ";

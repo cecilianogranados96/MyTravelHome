@@ -1,4 +1,19 @@
 <br><br><br><br><br><br><br><br><br>
+<?php
+##################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Calificación del hotel
+#
+# Desarrollo:
+# 
+# - JOSE ANDRÉS CECILIANO GRANADOS
+#
+#
+###################################################################
+?>
 <?php 
  
 if (isset($_GET['act'])){
@@ -8,8 +23,7 @@ if (isset($_GET['act'])){
         '".$_GET['cal']."',
         '".$_POST['comentario']."')";
         $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
-       // echo $query;
-        echo '<script>alert("Calificado con exito!"); window.location.href = "?pag='.$_GET['pagina'].'";</script>';
+        echo '<script>alert("¡Calificado con éxito!"); window.location.href = "?pag='.$_GET['pagina'].'";</script>';
 }
 ?>
 

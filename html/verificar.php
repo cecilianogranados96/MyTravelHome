@@ -1,4 +1,21 @@
-<br><br><br><br><br><br><br><br><br><?php 
+<br><br><br><br><br><br><br><br><br>
+<?php
+##################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Registro de un nuevo hotel
+#
+# Desarrollo:
+# 
+# - JOSE ANDRÉS CECILIANO GRANADOS
+#
+# Mejoras:
+# 
+# - SILVIA CALDERÓN NAVARRO
+#
+###################################################################
 
 if (isset($_GET['rhotel'])){
         $query = "INSERT INTO `hotel`(`nombre`, `tipo_hotel`, `caracteristica`, `distrito`, `localizacion`, `rango_precio`, `categoria`) VALUES (
@@ -20,7 +37,7 @@ if (isset($_GET['rhotel'])){
         VALUES ('".mysql_insert_id()."','".$_POST['apellido_p']."','".$_POST['apellido_p']."','".$_POST['nacionalidad']."','".$_POST['genero']."','".$_POST['cedula']."','".$_POST['admin']."','".$hotel."')";
         $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
 
-        echo '<script>alert("Registrado con exito!"); window.location.href = "index.php";</script>';
+        echo '<script>alert("¡Registrado con éxito!"); window.location.href = "index.php";</script>';
 }
 
 //---------------------------------------------------------
@@ -36,7 +53,7 @@ if (isset($_GET['ragencia'])){
     $query = "INSERT INTO `agencia`(`id_usuario`, `nombre`, `foto`) VALUES ('".mysql_insert_id()."','".$_POST['nombre_agencia']."','".$foto_url."')";
     $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
     
-    echo '<script>alert("Registrado con exito!"); window.location.href = "index.php";</script>';
+    echo '<script>alert("¡Registrado con éxito!"); window.location.href = "index.php";</script>';
 }
 
 //---------------------------------------------------------
@@ -53,7 +70,7 @@ if (isset($_GET['rcliente'])){
     $query = "INSERT INTO `cliente`(`id_usuario`, `nombre`, `apellido`, `genero`, `cedula`, `fecha_nacimiento`, `cuenta_bancaria`, `nacionalidad`, `fotografia`) VALUES ('".mysql_insert_id()."','".$_POST['nombre']."','".$_POST['apellido']."','".$_POST['genero']."','".$_POST['cedula']."','".$_POST['fecha']."','".$_POST['cuenta']."','".$_POST['nacionalidad']."','".$foto_url."')";
     
     $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
-    echo '<script>alert("Registrado con exito!"); window.location.href = "index.php";</script>';
+    echo '<script>alert("¡Registrado con éxito!"); window.location.href = "index.php";</script>';
 
 }
 
@@ -83,11 +100,7 @@ if (isset($_GET['verificar'])){
         
         
     }else{
-        echo '<script>alert("Error al accesar intente nuevamente"); window.location.href = "index.php";</script>';
+        echo '<script>alert("Error al accesar, intente nuevamente"); window.location.href = "index.php";</script>';
     }
 }
-
-
-
-
 ?>

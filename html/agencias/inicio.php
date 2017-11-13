@@ -1,4 +1,18 @@
-<?                
+<?php
+##################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Página de inicio para las agencias
+#
+# Desarrollo:
+# 
+# - SILVIA CALDERÓN NAVARRO
+#
+#
+###################################################################
+
         $query = "SELECT usuario FROM `usuario` WHERE id_usuario = '".$_SESSION['usuario']."' ";
         $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
         $query = "SELECT nombre as nombre_agencia, foto FROM `agencia` WHERE id_usuario = '".$_SESSION['usuario']."' ";

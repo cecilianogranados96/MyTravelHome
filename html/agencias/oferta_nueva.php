@@ -1,4 +1,18 @@
 <?php 
+##################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Página para crear una nueva oferta
+#
+# Desarrollo:
+# 
+# - SILVIA CALDERÓN NAVARRO
+#
+#
+###################################################################
+
     $query = "SELECT usuario, contrasena FROM `usuario` WHERE id_usuario = '".$_SESSION['usuario']."' ";
     $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
     $datos2 = mysql_fetch_array($result, MYSQL_ASSOC);

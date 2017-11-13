@@ -1,6 +1,23 @@
+
 <br><br><br><br><br><br><br><br><br>
 <?php 
- 
+##################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Reservar una habitación
+#
+# Desarrollo:
+# 
+# - JOSE ANDRÉS CECILIANO GRANADOS
+#
+# Mejoras:
+# 
+# - SILVIA CALDERÓN NAVARRO
+#
+################################################################### 
+
 if (isset($_GET['act'])){
 
         $query = "INSERT INTO `reservacion`(`id_usuario`, `id_habitacion`, `fecha_entrada`, `fecha_salida`) VALUES 
@@ -17,7 +34,7 @@ if (isset($_GET['act'])){
         $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
    
     
-        echo '<script>alert("Reservado con exito!"); window.location.href = "?pag=mis_reservaciones";</script>';
+        echo '<script>alert("¡Reservado con éxito!"); window.location.href = "?pag=mis_reservaciones";</script>';
 }
 
 
@@ -26,7 +43,7 @@ if (isset($_GET['act'])){
 <div class="db-cent-table db-com-table">
     <div class="db-title">
         <center>
-            <h3><img src="images/icon/dbc6.png" />Reservar una habitacion</h3>
+            <h3><img src="images/icon/dbc6.png" />Reservar una habitación</h3>
             <p>My Travel Home</p>
         </center>
     </div>
@@ -36,7 +53,6 @@ if (isset($_GET['act'])){
                 <label>Nombre Completo</label>
                 <div class="input-field s12">
                     <input type="text" value="<?php echo $datos['nombre']." ".$datos['apellido']; ?>" class="validate" disabled>
-
                 </div>
             </div>
            
@@ -56,7 +72,7 @@ if (isset($_GET['act'])){
             </div>
             
             <div>
-                <label>Numero de cuenta</label>
+                <label>Número de cuenta</label>
                 <div class="input-field s12">
                     <input type="number" class="validate" value="<?php echo $datos['cuenta_bancaria']; ?>" disabled>
 

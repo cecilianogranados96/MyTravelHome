@@ -1,3 +1,19 @@
+<?php
+##################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# rEPORTES DE HOTELES POR SERVICIO
+#
+# Desarrollo:
+# 
+# - JOSE ANDRÉS CECILIANO
+#
+#
+###################################################################
+
+?>
 <div class="db-cent-table db-com-table">
     <div class="db-title">
         <center>

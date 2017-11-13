@@ -1,5 +1,19 @@
-
 <br><br><br><br><br><br><br><br><br>
+<?php
+##################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Actualización de cuenta
+#
+# Desarrollo:
+# 
+# - JOSE ANDRÉS CECILIANO GRANADOS
+#
+#
+###################################################################
+?>
 <?php 
 if (isset($_GET['act'])){
         if ($_POST['pass'] == ""){
@@ -59,7 +73,7 @@ if (isset($_GET['act'])){
                 </div>
             </div>
             <div>
-                <label>Cedula</label>
+                <label>Cédula</label>
                 <div class="input-field s12">
                     <input type="number" class="validate" value="<?php echo $datos['cedula']; ?>" name="cedula">
 
@@ -80,7 +94,7 @@ if (isset($_GET['act'])){
                 </div>
             </div>
             <div>
-                <label>Genero</label>
+                <label>Género</label>
                 <div class="input-field s12">
                     <select name="genero" class="validate">
                             <?php

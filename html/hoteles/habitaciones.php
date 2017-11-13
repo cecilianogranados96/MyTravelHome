@@ -13,7 +13,7 @@ if (isset($_GET['borr'])){
     <div class="db-title">
         <center>
             <h3><img src="images/icon/dbc6.png" />Habitaciones activo</h3>
-            <p>Se insertan las categorias de un hotel</p>
+            <p>Se insertan las categorías de un hotel</p>
         </center>
     </div>
 
@@ -28,7 +28,7 @@ if (isset($_GET['borr'])){
                     <center>Nombre </center>
                 </th>
                 <th>
-                    <center>Numero</center>
+                    <center>Número</center>
                 </th>
                   <th>
                     <center>Estado</center>

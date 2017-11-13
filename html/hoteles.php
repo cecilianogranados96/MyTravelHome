@@ -1,4 +1,19 @@
-	<br><br><br><br>	<div class="inn-body-section pad-bot-55">
+<br><br><br><br>	
+<?php
+##################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Página principal de hoteles
+#
+# Desarrollo:
+# 
+# - JOSE ANDRÉS CECILIANO GRANADOS
+#
+###################################################################
+?>
+<div class="inn-body-section pad-bot-55">
 			<div class="container">
 				<div class="row">
 					<div class="page-head">

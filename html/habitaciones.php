@@ -1,5 +1,20 @@
-<!--TOP SECTION-->
-	<br><br><br><br>	<style>
+<br><br><br><br>
+<?php
+##################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Página principal de habitaciones
+#
+# Desarrollo:
+# 
+# - JOSE ANDRÉS CECILIANO GRANADOS
+#
+#
+###################################################################
+?>
+<style>
 .ec-stars-wrapper {
 	/* Espacio entre los inline-block (los hijos, los `a`) 
 	   http://ksesocss.blogspot.com/2012/03/display-inline-block-y-sus-empeno-en.html */
@@ -30,6 +45,7 @@
 	color: #888;
 }
 </style>
+
 <div class="inn-body-section pad-bot-55">
 			<div class="container">
 				<div class="row">

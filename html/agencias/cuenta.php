@@ -1,4 +1,20 @@
-
+<br><br><br><br><br><br><br><br>
+	<br><br><br><br>
+<?php
+##################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Muestra y actualización de la cuenta de una agencia
+#
+# Desarrollo:
+# 
+# - SILVIA CALDERÓN NAVARRO
+#
+#
+###################################################################
+?>
 <?php 
     
     $query = "SELECT usuario, contrasena FROM `usuario` WHERE id_usuario = '".$_SESSION['usuario']."' ";

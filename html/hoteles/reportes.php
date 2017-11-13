@@ -43,12 +43,12 @@
 					</div>
 					<div class="db-2-main-1">
 						<div class="db-2-main-2"> <img src="images/icon/dbc6.png" alt=""> <span>Habitaciones</span>
-							<p>Habitaciones totales de los hoteles</p>
+							<p>Total de habitaciones</p>
 							<h2><?php echo $habitaciones; ?></h2> </div>
 					</div>
 					<div class="db-2-main-1">
 						<div class="db-2-main-2"> <img src="images/icon/dbc3.png" alt=""> <span>Puntuaciones</span>
-							<p>Total de estrellas segun las puntuaciones</p>
+							<p>Total de estrellas según las puntuaciones</p>
 							<h2><?php echo $calificacion; ?></h2><h3><?php echo $estrellas; ?> </div>
 					</div>
 				</div>

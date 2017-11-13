@@ -1,4 +1,18 @@
 <?
+##################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Página de inicio
+#
+# Desarrollo:
+# 
+# - SILVIA CALDERÓN NAVARRO
+#
+#
+###################################################################
+
         
         $query = "SELECT * FROM `adm_plataforma` WHERE id_usuario = '".$_SESSION['usuario']."' ";
         $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
@@ -23,13 +37,9 @@
 					<ul>
 						<li>
 							<a href="?pag=<?php echo $_GET['pag']; ?>"><img src="images/icon/db1.png" alt="" /> General</a>
-						</li>
-                         
-						<li>
-							<a href="?pag=<?php echo $_GET['pag']; ?>&pagina=usuarios"><img src="images/icon/db7.png" alt="" /> Usuarios</a>
-						</li>
+						</li>                    
                         <li>
-							<a href="?pag=<?php echo $_GET['pag']; ?>&pagina=usuarios"><img src="images/icon/h7.png" alt="" /> Bitácora</a>
+							<a href="?pag=<?php echo $_GET['pag']; ?>&pagina=bitacora"><img src="images/icon/h7.png" alt="" /> Bitácora</a>
 						</li>
                         <li>
 							<a href="?pag=<?php echo $_GET['pag']; ?>&pagina=hoteles"><img src="images/icon/h5.png" alt="" /> Hoteles</a>

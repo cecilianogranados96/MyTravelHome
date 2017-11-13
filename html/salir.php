@@ -10,11 +10,11 @@
 #
 # Desarrollo:
 # 
-# - JOSE ANDRES CECILIANO GRANADOS
+# - JOSE ANDRÉS CECILIANO GRANADOS
 #
 # Mejoras:
 # 
-# - SILVIA CALDERON NAVARRO
+# - SILVIA CALDERÓN NAVARRO
 #
 ###################################################################
     session_destroy(); 

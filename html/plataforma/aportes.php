@@ -1,5 +1,18 @@
-
 <?php 
+##################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Página reportes por aporte
+#
+# Desarrollo:
+# 
+# - JOSE ANDRÉS CECILIANO GRANADOS
+#
+#
+###################################################################
+
 $where = "";
 if (isset($_GET['buscar'])){    
         $where = "where apellido LIKE '%".$_POST['nombre']."%' or nombre LIKE '%".$_POST['nombre']."%' ";    

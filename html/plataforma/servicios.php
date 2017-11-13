@@ -1,4 +1,18 @@
 <?php 
+##################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Catálogo de servicios
+#
+# Desarrollo:
+# 
+# - SILVIA CALDERÓN NAVARRO
+#
+#
+###################################################################
+
 
 if (isset($_GET['act'])){
         $query = " UPDATE `servicios_hotel` SET `nombre`= '".$_POST['nombre_p']."' WHERE id_servicio_hotel = '".$_GET['act']."' ";

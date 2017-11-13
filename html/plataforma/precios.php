@@ -1,4 +1,18 @@
 <?php 
+##################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Catálogo de rangos de precios
+#
+# Desarrollo:
+# 
+# - SILVIA CALDERÓN NAVARRO
+#
+#
+###################################################################
+
 
 if (isset($_GET['act'])){
         $query = " UPDATE `rango_precio` SET `precio_inicial`= '".$_POST['precio_i_p']."', `precio_final`= '".$_POST['precio_f_p']."'  WHERE id_rango = '".$_GET['act']."' ";

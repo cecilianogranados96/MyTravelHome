@@ -1,4 +1,18 @@
 <?php 
+##################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Catálogo de habitaciones
+#
+# Desarrollo:
+# 
+# - SILVIA CALDERÓN NAVARRO
+#
+#
+###################################################################
+
 
 if (isset($_GET['act'])){
         $query = " UPDATE `tipo_habitacion` SET `nombre`= '".$_POST['nombre_p']."' WHERE id_tipo_habitacion = '".$_GET['act']."' ";

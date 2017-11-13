@@ -1,4 +1,20 @@
 <br><br><br><br><br><br><br><br>
+<?php
+##################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Comentarios de la calificaciones
+#
+# Desarrollo:
+# 
+# - JOSE ANDRÉS CECILIANO GRANADOS
+#
+# 
+#
+###################################################################
+?>
 <style>
 blockquote{
     border-left:none
@@ -93,16 +109,7 @@ blockquote{
 
                 }                   
             ?>
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
+      
 </div>
         
         

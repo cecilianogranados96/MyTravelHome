@@ -1,4 +1,3 @@
-
 <?php 
  
 if (isset($_GET['act'])){
@@ -65,14 +64,14 @@ if (isset($_GET['act'])){
                 </div>
             </div>
             <div>
-                <label>Cedula</label>
+                <label>Cédula</label>
                 <div class="input-field s12">
                     <input type="number" class="validate" value="<?php echo $datos['cedula']; ?>" name="cedula">
 
                 </div>
             </div>
             <div>
-                <label>Genero</label>
+                <label>Género</label>
                 <div class="input-field s12">
                     <select name="genero" class="validate">
                             <?php
