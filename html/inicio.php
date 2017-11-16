@@ -116,7 +116,7 @@
                                     <?php
                                         }   
                                         if (!isset($_GET['canton'])){
-                                            echo "<select><option disabled selected>CANTÓN</option>"; 
+                                            echo "<select><option disabled selected>DISTRITO</option>"; 
                                         }else {
                                             $result = mysql_query('SELECT `id_distrito`, `nombre` FROM `distrito` WHERE `id_canton` = '.$_GET['canton'].'') or die('Consulta fallida: ' . mysql_error());
                                             while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
