@@ -12,6 +12,9 @@
 #
 #
 ###################################################################
+ if ( $datos['tipo'] != 0 ){
+            echo '<script> window.location.href = "index.php?pag=salir";</script>';
+} 
 ?> 
 <div>
     <div class="slider fullscreen">
@@ -47,45 +50,125 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s12 m4 l2">
-                                <select>
-                                    <option value="" disabled selected>Pais</option>
-                                    <option value="1">Master Suite</option>
-                                    <option value="2">Mini-Suite</option>
-                                    <option value="3">Ultra Deluxe</option>
-                                    <option value="4">Luxury</option>
-                                    <option value="5">Premium </option>
-                                    <option value="6">Normal</option>
+                                <select onchange="window.location.href = '?pais=' + this.value; ">
+                                    <option value="" disabled selected>PAÍS</option>
+                                    <?php
+                                        $result = mysql_query('SELECT id_pais,nombre FROM pais') or die('Consulta fallida: ' . mysql_error());
+                                        while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+                                            if ($line['id_pais'] == $_GET['pais']){
+                                                    echo "<option value='".$line['id_pais']."' selected>".strtoupper($line['nombre'])."</option>";    
+                                                }else{
+                                                    echo "<option value='".$line['id_pais']."'>".strtoupper($line['nombre'])."</option>";
+                                                }
+                                        }
+                                    ?>
                                 </select>
                             </div>
                             <div class="input-field col s12 m4 l2">
-                                <select>
-                                    <option value="" disabled selected>Provincia</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="1">4</option>
+                                <?php if (isset($_GET['pais'])){ ?>
+                                    <select onchange="window.location.href = '?pais=<?php echo $_GET['pais']; ?>&provincia=' + this.value; " >
+                                    <option value="" disabled selected>PROVINCIA</option>
+                                    <?php
+                                        }   
+                                        if (!isset($_GET['pais'])){
+                                            echo "<select><option disabled selected>PROVINCIA</option>";
+                                            
+                                        }else {
+                                            $result = mysql_query('SELECT `id_provincia`, `nombre` FROM `provincia` WHERE `id_pais` = '.$_GET['pais'].'') or die('Consulta fallida: ' . mysql_error());
+                                            while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+                                                if ($line['id_provincia'] == $_GET['provincia']){
+                                                    echo "<option value='".$line['id_provincia']."' selected>".strtoupper($line['nombre'])."</option>";    
+                                                }else{
+                                                    echo "<option value='".$line['id_provincia']."'>".strtoupper($line['nombre'])."</option>";
+                                                }
+                                            }
+                                        }
+                                    ?>
                                 </select>
                             </div>
                             <div class="input-field col s12 m4 l2">
-                                <select>
-                                    <option value="" disabled selected>Canton</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="1">4</option>
+                                     <?php if (isset($_GET['provincia'])){ ?>
+                                    <select onchange="window.location.href = '?pais=<?php echo $_GET['pais']; ?>&provincia=<?php echo $_GET['provincia']; ?>&canton=' + this.value; " >
+                                    <option value="" disabled selected>CANTÓN</option>
+                                    <?php
+                                        }   
+                                        if (!isset($_GET['provincia'])){
+                                            echo "<select><option disabled selected>CANTÓN</option>"; 
+                                        }else {
+                                            $result = mysql_query('SELECT `id_canton`, `nombre` FROM `canton` WHERE `id_provincia` = '.$_GET['provincia'].'') or die('Consulta fallida: ' . mysql_error());
+                                            while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+                                               
+                                                if ($line['id_canton'] == $_GET['canton']){
+                                                    echo "<option value='".$line['id_canton']."' selected>".strtoupper($line['nombre'])."</option>";    
+                                                }else{
+                                                    echo "<option value='".$line['id_canton']."'>".strtoupper($line['nombre'])."</option>";
+                                                }
+                                                
+                                            }
+                                        }
+                                    ?>
                                 </select>
                             </div>
                             <div class="input-field col s12 m4 l2">
-                                <input type="text" id="from" name="from">
+                                     <?php if (isset($_GET['canton'])){ ?>
+                                    <select onchange="window.location.href = '?pais=<?php echo $_GET['pais']; ?>&provincia=<?php echo $_GET['provincia']; ?>&canton=<?php echo $_GET['canton']; ?>&distrito=' + this.value; " >
+                                    <option value="" disabled selected>DISTRITO</option>
+                                    <?php
+                                        }   
+                                        if (!isset($_GET['canton'])){
+                                            echo "<select><option disabled selected>CANTÓN</option>"; 
+                                        }else {
+                                            $result = mysql_query('SELECT `id_distrito`, `nombre` FROM `distrito` WHERE `id_canton` = '.$_GET['canton'].'') or die('Consulta fallida: ' . mysql_error());
+                                            while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+                                               
+                                                if ($line['id_distrito'] == $_GET['distrito']){
+                                                    echo "<option value='".$line['id_distrito']."' selected>".strtoupper($line['nombre'])."</option>";    
+                                                }else{
+                                                    echo "<option value='".$line['id_distrito']."'>".strtoupper($line['nombre'])."</option>";
+                                                }
+                                                
+                                            }
+                                        }
+                                    ?>
+                                </select>
+                            </div>
+                            <div class="input-field col s12 m4 l2">
+                                <input type="text" id="from" name="from" value="<?php if (isset($_GET['from'])){ echo $_GET['from']; }?>" <?php if (isset($_GET['provincia'])){ ?>
+                                    onchange="window.location.href = '?pais=<?php echo $_GET['pais']; ?>&provincia=<?php echo $_GET['provincia']; ?>&canton=<?php echo $_GET['canton']; ?>&distrito=<?php echo $_GET['distrito']; ?>&from=' + this.value; " <?php } ?> > 
                                 <label for="from">Fecha de arribo</label>
                             </div>
                             <div class="input-field col s12 m4 l2">
-                                <input type="text" id="to" name="to">
+                                <input type="text" id="to" name="to" value="<?php if (isset($_GET['to'])){ echo $_GET['to']; }?>"  <?php if (isset($_GET['from'])){ ?>
+                                    onchange="window.location.href = '?pais=<?php echo $_GET['pais']; ?>&provincia=<?php echo $_GET['provincia']; ?>&canton=<?php echo $_GET['canton']; ?>&distrito=<?php echo $_GET['distrito']; ?>&from=<?php echo $_GET['from']; ?>&to=' + this.value; " <?php } ?>>
                                 <label for="to">Fecha de salida</label>
                             </div>
-                            <div class="input-field col s12 m4 l2">
-                                <input type="submit" value="Buscar" class="form-btn"> </div>
+                            
+                            
                         </div>
+                        <br><br>
+                        <center>
+                                <?php 
+                            
+                                if (isset($_GET['to'])){
+                                    
+                                    $url1 = "?pag=habitaciones&pais=".$_GET['pais']."&provincia=".$_GET['provincia']."&canton=".$_GET['canton']."&distrito=".$_GET['distrito']."&from=".$_GET['from']."&to=".$_GET['to']."";
+                                    
+                                    $url2 = "?pag=hoteles&pais=".$_GET['pais']."&provincia=".$_GET['provincia']."&canton=".$_GET['canton']."&distrito=".$_GET['distrito']."&from=".$_GET['from']."&to=".$_GET['to']."";
+                                    
+                                }else{
+                                    $url1 = "#";
+                                    $url2 = "#";
+                                }
+                                ?>
+                                <a href="<?php echo $url1; ?>" class="form-btn">Buscar Habitaciones</a>         
+                           
+
+
+                             
+                                <a href="<?php echo $url2; ?>" class="form-btn">Buscar Hoteles</a>
+                           
+                        </center>
+                        
                     </form>
                 </div>
             </div>

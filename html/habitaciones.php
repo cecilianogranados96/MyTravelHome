@@ -70,7 +70,19 @@
                                 $facilidades = "";
                                 $estrellas = "";
                                 $precio = "";
-                                $query = 'SELECT habitacion.nombre as nombre_habitacion, hotel.nombre as nombre_hotel,hotel.id_hotel, habitacion.id_habitacion, habitacion.precio, habitacion.estado, categoria_hotel.nombre as categoria_hotel from habitacion INNER JOIN hotel on habitacion.id_hotel = hotel.id_hotel inner join categoria_hotel on categoria_hotel.id_categoria_hotel = hotel.categoria where habitacion.estado = 1 '.$hotel.' ';
+                    
+                      if (isset($_GET['distrito'])){
+                     $query = 'SELECT habitacion.nombre as nombre_habitacion, hotel.nombre as nombre_hotel,hotel.id_hotel, habitacion.id_habitacion, habitacion.precio, habitacion.estado, categoria_hotel.nombre as categoria_hotel from habitacion INNER JOIN hotel on habitacion.id_hotel = hotel.id_hotel inner join categoria_hotel on categoria_hotel.id_categoria_hotel = hotel.categoria where habitacion.estado = 1 '.$hotel.' and hotel.distrito = '.$_GET['distrito'].' ';
+                          
+                          
+                      
+                }else{
+                     $query = 'SELECT habitacion.nombre as nombre_habitacion, hotel.nombre as nombre_hotel,hotel.id_hotel, habitacion.id_habitacion, habitacion.precio, habitacion.estado, categoria_hotel.nombre as categoria_hotel from habitacion INNER JOIN hotel on habitacion.id_hotel = hotel.id_hotel inner join categoria_hotel on categoria_hotel.id_categoria_hotel = hotel.categoria where habitacion.estado = 1 '.$hotel.' ';
+                }
+                    
+                    
+                    
+                    
                                 $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
                                 while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
                                     

@@ -51,8 +51,12 @@
             }
             var beaches = [
 
-                        <?php 
-                $query = 'SELECT * FROM hotel';
+            <?php 
+                if (isset($_GET['distrito'])){
+                    $query = 'SELECT * FROM hotel where distrito = '.$_GET['distrito'].'';
+                }else{
+                    $query = 'SELECT * FROM hotel';
+                }
                 $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
                 while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {  
                     

@@ -18,5 +18,5 @@
 #
 ###################################################################
     session_destroy(); 
-    header ("Location: ?pag=inicio");
+    header ("Location: ?pag=ingresar");
 ?>
