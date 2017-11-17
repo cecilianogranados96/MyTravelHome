@@ -72,12 +72,12 @@
                                 $precio = "";
                     
                       if (isset($_GET['distrito'])){
-                     $query = 'SELECT habitacion.nombre as nombre_habitacion, hotel.nombre as nombre_hotel,hotel.id_hotel, habitacion.id_habitacion, habitacion.precio, habitacion.estado, categoria_hotel.nombre as categoria_hotel from habitacion INNER JOIN hotel on habitacion.id_hotel = hotel.id_hotel inner join categoria_hotel on categoria_hotel.id_categoria_hotel = hotel.categoria where habitacion.estado = 1 '.$hotel.' and hotel.distrito = '.$_GET['distrito'].' ';
+                     $query = 'SELECT habitacion.nombre as nombre_habitacion, hotel.nombre as nombre_hotel,hotel.id_hotel, habitacion.id_habitacion, habitacion.precio, habitacion.estado, categoria_hotel.nombre as categoria_hotel from habitacion INNER JOIN hotel on habitacion.id_hotel = hotel.id_hotel inner join categoria_hotel on categoria_hotel.id_categoria_hotel = hotel.categoria where habitacion.estado = 1 '.$hotel.' and hotel.distrito = '.$_GET['distrito'].' and hotel.estado = 1 ';
                           
                           
                       
                 }else{
-                     $query = 'SELECT habitacion.nombre as nombre_habitacion, hotel.nombre as nombre_hotel,hotel.id_hotel, habitacion.id_habitacion, habitacion.precio, habitacion.estado, categoria_hotel.nombre as categoria_hotel from habitacion INNER JOIN hotel on habitacion.id_hotel = hotel.id_hotel inner join categoria_hotel on categoria_hotel.id_categoria_hotel = hotel.categoria where habitacion.estado = 1 '.$hotel.' ';
+                     $query = 'SELECT habitacion.nombre as nombre_habitacion, hotel.nombre as nombre_hotel,hotel.id_hotel, habitacion.id_habitacion, habitacion.precio, habitacion.estado, categoria_hotel.nombre as categoria_hotel from habitacion INNER JOIN hotel on habitacion.id_hotel = hotel.id_hotel inner join categoria_hotel on categoria_hotel.id_categoria_hotel = hotel.categoria where habitacion.estado = 1 '.$hotel.' and hotel.estado = 1';
                 }
                     
                     

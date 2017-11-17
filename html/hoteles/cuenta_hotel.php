@@ -7,7 +7,8 @@ if (isset($_GET['act'])){
         `distrito`='".$_POST['distrito']."',
         `localizacion`= '".$_POST['localicacion']."',
         `rango_precio`='".$_POST['precio']."',
-        `categoria`='".$_POST['categoria']."'
+        `categoria`='".$_POST['categoria']."',
+        `estado`='".$_POST['estado']."'
         WHERE `id_hotel`= ".$hotel['id_hotel']."  ";
         $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error()); 
         echo '<script>window.location.href = "?pag='.$_GET['pag'].'&pagina='.$_GET['pagina'].'";</script>';
@@ -90,6 +91,23 @@ $loc = explode(",", $hotel['localizacion']);
                             ?>
                 </select>
                 </div>
+                
+                <label>Estado</label>
+                <div class="input-field s12">
+                    <select name="estado" class="validate">
+                        <?php if($hotel['estado'] == 1){
+                                echo '<option value="1" selected>Disponible</option>';
+                            }else{
+                                 echo '<option value="0" selected>Desactivado</option>';
+                            }
+                        ?>
+                        <option value="1">Disponible</option>
+                        <option value="0">Desactivado</option>
+                </select>
+                </div>
+                
+                
+                
 
                 <label>Categoría</label>
                 <div class="input-field s12">
