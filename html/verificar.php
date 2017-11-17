@@ -33,8 +33,7 @@ if (isset($_GET['rhotel'])){
         $query = "INSERT INTO `usuario`(`usuario`, `contrasena`, `tipo`) VALUES ('".$_POST['user']."','".md5($_POST['pass'])."',1)";
         $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
 
-        $query = "INSERT INTO `adm_hotel`(`id_usuario`, `nombre`, `apellido`, `nacionalidad`, `genero`, `cedula`, `admin`,`id_hotel`) 
-        VALUES ('".mysql_insert_id()."','".$_POST['apellido_p']."','".$_POST['apellido_p']."','".$_POST['nacionalidad']."','".$_POST['genero']."','".$_POST['cedula']."','".$_POST['admin']."','".$hotel."')";
+        $query = "call insertAdm_hotel('".mysql_insert_id()."','".$_POST['apellido_p']."','".$_POST['apellido_p']."','".$_POST['nacionalidad']."','".$_POST['genero']."','".$_POST['cedula']."','".$_POST['admin']."','".$hotel."')";
         $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
 
         echo '<script>alert("¡Registrado con éxito!"); window.location.href = "index.php";</script>';
