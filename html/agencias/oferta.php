@@ -144,7 +144,7 @@
                                     <center>".$line['nombre_habitacion']."</center>
                                 </td>
                                 <td>
-                                    <center>".$line['porcentaje']."</center>
+                                    <center>".$line['porcentaje']."%</center>
                                 </td>
                                 <td>
                                     <center><a href='?pag=".$_GET['pag']."&pagina=".$_GET['pagina']."&edit=".$line['id_descuento']."' class='btn btn-success'>Editar</a></center>

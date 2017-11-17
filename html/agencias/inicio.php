@@ -15,10 +15,12 @@
 
         $query = "SELECT usuario FROM `usuario` WHERE id_usuario = '".$_SESSION['usuario']."' ";
         $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+        $datos1 = mysql_fetch_array($result, MYSQL_ASSOC);
         $query = "SELECT nombre as nombre_agencia, foto FROM `agencia` WHERE id_usuario = '".$_SESSION['usuario']."' ";
         $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
-        $datos = mysql_fetch_array($result, MYSQL_ASSOC);
-        $datos = array_merge($datos,$datos2);
+        $datos2 = mysql_fetch_array($result, MYSQL_ASSOC);
+
+        $datos = array_merge($datos1,$datos2);
 ?>
 		
 <div class="dashboard" style="margin-top: 0px !important;">

@@ -45,7 +45,8 @@
             <div>
                 <label>Hotel</label>
                     <div class="input-field s12">
-                        <select name="hotel" class="validate" >
+                        <select name="hotel" class="validate" onchange="window.location.href = '?pag=<?php echo $_GET['pag']?>&pagina=<?php echo $_GET['pagina']?>&hotel=' + this.value">
+                            <option>HOTEL</option>
                             <?php
                                 $query = 'SELECT * FROM hotel';
                                 $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
@@ -63,7 +64,7 @@
                         <select name="habitacion" class="validate" >
                             <?php
                                 //$query = 'SELECT * FROM habitacion where id_hotel =  '.$_POST['hotel'].'';
-                                $query = 'SELECT * FROM habitacion';
+                                $query = 'SELECT * FROM habitacion where id_hotel = '.$_GET['hotel'].'';
                                 $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
                                 while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
                                     echo "<option value='".$line['id_habitacion']."'>".$line['nombre']."</option>";
